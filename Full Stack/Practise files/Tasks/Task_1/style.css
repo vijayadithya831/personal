@@ -1,0 +1,59 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/Tasks/Task_1/Images/Math.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    animation: slideUp 1.5s;
+}
+#mainbox {
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(245, 245, 245, 60%);
+    border-radius: 25px;
+}
+button {
+    background-color: #7900ad;
+    font-family: 'Times New Roman', Times, serif;
+    color: whitesmoke;
+    padding: 10px;
+    border-radius: 30px;
+    transition: transform 0.2s ease;
+}
+button:hover {
+    cursor: pointer;
+    background-color: #5f0187;
+}
+button:active {
+    transform: scale(0.96);
+}
+#circumference {
+    display: none;
+    width: 15em;
+    padding: 10px;
+    animation: slideUp 1.5s;
+}
+#area {
+    display: none;
+    width: 15em;
+    padding: 10px;
+    animation: slideUp 1.5s;
+}
+.answer {
+    display: flex;
+    column-gap: 20px;
+    margin-top: 20px;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+@keyframes slideUp {
+    from{transform: translateY(100%);
+    opacity: 0;
+    }
+}
+

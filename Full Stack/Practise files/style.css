@@ -1,0 +1,36 @@
+#leftpanel {
+    background-color: #151a63;
+    width: 40%;
+}
+#rightpanel {
+    background-color: rgb(190, 182, 182);
+    width: 60%;
+}
+.panel {
+    display: flex;
+}
+#dp {
+    display: block;
+    height: 150px;
+    margin: 20px auto 0px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+.leftcontents {
+    margin-left: 25px;
+    color: whitesmoke
+}
+.rightcontents {
+    margin: 0px 15px 0px;
+}
+.line {
+    border: 1px solid #151a63;
+}
+body {
+    height: 842px;
+    width: 595px;
+    /* to centre page on screen*/
+    margin-left: auto;
+    margin-right: auto;
+}

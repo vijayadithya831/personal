@@ -1,0 +1,277 @@
+/* #p1 {
+
+  color: green;
+
+}
+
+#p2 {
+
+
+  color: red;
+
+}
+
+#p3 {
+
+  color: blue;
+
+}
+
+#p4 {
+
+   color: steelblue;
+
+} 
+
+body {
+
+   background-color: rgb(41,41,41);
+
+}
+
+.odd {
+
+   color: #ae5bd4;
+
+}
+
+.even {
+
+   color: rgb(239, 239, 30);
+
+} 
+
+
+h1 {
+ 
+    border: 3px solid tomato;
+    border-radius: 5px;
+
+}
+
+
+p {
+
+   border-bottom: 3px solid lightblue;
+   border-top: 3px solid thistle;
+   border-left: 3px dotted orange;
+   border-right: 3px dotted green;
+
+   border-radius: 8px;
+
+} 
+
+
+h1 {
+
+  text-shadow: 3px 3px 5px red, -3px -3px 5px lightskyblue;
+
+}
+
+#box1 {
+
+   width: 100px;
+   height: 100px;
+   background-color: lightgrey;
+   box-shadow: 3px 3px 5px;
+
+}
+
+
+
+
+.box {
+
+  border: 5px solid;
+  font-size: 5em;
+  width: 250px;
+  height: 250px;
+  margin: auto;
+  
+}
+
+#box1 {
+
+  background-color: tomato;
+
+
+}
+
+#box2 {
+
+  background-color: aquamarine;
+
+}
+
+
+
+body {
+
+  border: 3px solid;
+  display: flow-root;
+
+}
+
+#img1 {
+
+   float: left;
+
+   margin-right: 10px;
+}
+
+#img2 {
+
+    float: right;
+    margin-right: 10px;
+
+}
+
+
+
+div {
+
+  border: 2px solid;
+  height: 60px;
+  overflow: auto;
+
+} 
+
+div {
+
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+
+span {
+
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+  
+} */
+
+/* * {
+
+  box-sizing: border-box;
+
+}
+
+.box {
+
+  border: 2px solid;
+  padding: 25px;
+  height: auto;
+  width: 50%;
+  float: left;
+  text-align: center;
+
+  min-width: 75%;
+
+} 
+
+
+#box1 {
+
+  width: 200px;
+  height: 200px;
+  background-color: rgb(19, 206, 243);
+  position: sticky;
+  top: 0px;
+
+}
+
+#box2 {
+
+  width: 100px;
+  height: 100px;
+  background-color: rgb(177, 24, 24);
+  position: absolute;
+  top: 50px;
+  left: 50px;
+
+}
+
+body {
+
+   background-image: url(/images/background1.jpg);
+
+   background-repeat: no-repeat;
+   background-position: center;
+   background-attachment: fixed;
+   background-size: cover;
+}
+
+
+
+a:link {
+ 
+  color: darkblue;
+
+}
+
+a:hover {
+
+   color: blue;
+   font-size: 1.1em;
+
+}
+
+a:active {
+
+   color: red;
+   font-size: 1.1em;
+
+} 
+
+li:hover {
+
+  background-color: blue;
+
+}
+
+li:not(:hover) {
+
+  background-color: grey;
+
+} 
+
+li:nth-child(2n) {
+
+background-color: yellow;
+
+} */
+
+#greeting p {
+
+  background-color: rgb(23, 175, 234);
+
+  padding: 10px;
+
+  display: none;
+
+}
+
+
+
+#greeting:hover p{
+
+   display: block;
+   
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

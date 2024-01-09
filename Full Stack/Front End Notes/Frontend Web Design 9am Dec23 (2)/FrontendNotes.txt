@@ -1,0 +1,350 @@
+01/12/2023 - 9:30AM IST
+
+Frontend
+
+Role :- Software Engineer
+
+Software :- Is is set of instruction, which the machines will read that and perform some operations 
+
+Softwares :- 
+
+OS (Windows, Mac In Tosh, Linux, Ubuntu, Solaris)
+
+Desktop Softwares
+
+Web Applications
+
+Mobile Applications
+
+Gaming Softwares in Mobile, PC, Playstations
+
+Web Applications :-
+
+Banking Domain 
+
+Medical Domain 
+
+Educational Domain
+
+E-commerce Domain 
+
+Finance Domain
+
+Warehouse Domain
+
+Frontend Development ---> HTML, CSS, Javascript 
+(React JS, Angular JS, Vue JS, Next JS)
+
+Backend Development ----> Java, Python, Node JS, Express JS
+
+Database Management ----> SQL
+
+Frontend Development ----> HTML, CSS, Javascript
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9994030296 - Dinesh V
+
+Name:- 
+
+Dept:- 
+
+Passed out:- 
+
+Date of Joining:-
+
+Role :- Software Engineer 
+
+Frontend Development ----> HTML CSS Javascript (React JS)
+
+Backend Development ---> Advanced Java
+
+Database Management ---> SQL 
+
+
+HTML  ----> Hyper Text Markup Language 
+
+Header Part
+
+Body of the page 
+
+Footer Part
+
+
+
+
+
+
+
+7/12/2023 - 9:30AM - IST 
+
+HTML, CSS, Javascript 
+
+IDEs ---> Integrated Development Environment
+
+VS Code --> Visual Studio Code
+
+Browser --> Chrome, Brave
+
+HTML 
+
+Tags 
+
+<> ---> Opening Tag
+
+</> ---> Closing Tag
+
+Types of tags 
+ 
+Header Tag
+
+
+
+Attributes
+
+
+
+
+
+
+
+08/12/2023 - 9:30AM - IST
+
+Commenting in HTML 
+
+<!-- Some text -->
+
+Hyperlinks ---> is a digital reference to data that user can follow by click or taping the button or link
+
+11/12/2023 - 9:20AM - IST 
+
+Images 
+
+audio
+
+video
+
+12-12-2023 - 9:20 AM IST
+
+Favicons 
+
+Text Formating 
+
+span and div
+
+Group together HTML 
+
+
+Span --> <span> ---> inline container to group elements for styling puposes
+
+Div --> <div> ---> block container to group elements for styling purposes
+
+Lists in HTML 
+
+* Unordered List
+
+* Order List
+
+Tables in HTML 
+
+9994030296 ----> Dinesh
+
+Name
+
+Dept
+
+Course
+
+passed out 
+
+add me in 9am frontend group
+
+
+13/12/2023 - 9:25AM - IST
+
+Tables
+
+Buttons in HTML 
+
+Project Name ---> Package name --> Classes ---> methods and objects 
+
+Coding Standards 
+
+Pascal ---> Project, Classes, Constructors  
+
+JavascriptStudents
+
+Camel ---> functions, objects, Variables
+
+javascriptStudentBesant
+
+
+
+
+
+
+
+
+
+
+
+14-12-2023 - 9:26AM - IST
+
+Forms
+
+18/12/2023 - 9:20Am - IST
+
+CSS 
+
+Cascading Style Sheet
+
+Using CSS we can apply the CSS Properties to colour, style and decorate
+our HTML markup.
+
+Types of CSS
+
+Inline CSS
+
+Internal CSS
+
+External CSS
+
+
+
+colour :- named colours, RGB values, Hexadecimal values
+
+border :- 
+
+Shadows :-
+
+Margins :- space around the elements
+
+Float --> it allows other elements to flow around it
+
+overflow --> Property that sets the desired behavior when content does not fit in the parent element box (overflow)
+
+
+  overflow: visible
+  overflow: hidden
+  overflow: clip
+  overflow: scroll
+  overflow: auto
+
+
+display property ----> it specifies if/how an  element is displayed 
+
+block-level - start on a new line, take up the full width available
+
+(h1, div, p, form, header,footer)
+
+inline - do not start on a new line, width is limited to what is needed. 
+(span,a,img)
+
+height and width
+
+21/12/2023 - 9:22AM - IST
+
+Positions in CSS 
+
+  relative = postioned relative to where it normally should be.
+
+  fixed = postioned relative to the viewport(Website)
+
+  absolute = postioned relative to the nearest ancestor
+
+  sticky = postioned based on current scroll position 
+
+  static = default postion of an element
+
+  Background Images 
+
+  Pseudo - classes in CSS
+
+
+It is keywords added to selectors, they modify the behaviour of an element when they are in certain state.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
