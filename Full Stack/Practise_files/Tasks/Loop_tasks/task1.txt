@@ -1,0 +1,7 @@
+for(let i=1;i<=5;i++){
+    document.write(1,"<br>");
+    if(i==5){
+        break;
+    }
+    document.write(2,"<br>");
+}
