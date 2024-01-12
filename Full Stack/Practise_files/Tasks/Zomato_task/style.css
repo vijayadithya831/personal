@@ -1,0 +1,22 @@
+#logo{
+    height: 50px;
+}
+.navbar ul{
+    list-style-type: none;
+    background-color: black;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+.navbar a{
+    color: whitesmoke;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+.navbar a:hover{
+    background-color: grey;
+}
+.navbar li{
+    float: left;
+}
