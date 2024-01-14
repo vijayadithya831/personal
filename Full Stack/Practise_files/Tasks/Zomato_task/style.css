@@ -6,23 +6,25 @@
     gap: 1rem;
   /*   padding: 10px; */
     align-items: center;
-  }
-  body{
-    background-color: red;
-  }
-  .logo{
-    flex-basis: 25%;
-  }
-  .login{
-    flex-basis: 25%;
-  }
-  .search{
-    flex-basis: 50%;
-    height: 75%
-  }
-  a{
-    text-decoration: none;
-    color: red;
-    padding: 5px 5px;
-  }
-  
+}
+body{
+  background-color: red;
+}
+.logo{
+  flex-basis: 25%;
+}
+.login{
+  flex-basis: 25%;
+}
+.search{
+  flex-basis: 50%;
+  height: 75%
+}
+a{
+  text-decoration: none;
+  color: red;
+  padding: 5px 5px;
+}
+#logo{
+  height: 3rem;
+}
