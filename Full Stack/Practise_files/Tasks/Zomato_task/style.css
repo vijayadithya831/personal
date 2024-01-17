@@ -1,19 +1,20 @@
 body{
   background-color: #ffffff;
+  margin: 10px 200px;
 }
 .navbar{
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
-  margin: 30px
+  gap: 40px;
+  margin: 30px;
 }
 #logo{
   height: 80px;
 }
 #searchbar{
   padding: 15px;;
-  width: 50%;
+  width: 55%;
   border-radius: 10px;
   border: none;
   box-shadow: -1px 1px 3px grey;
@@ -46,28 +47,38 @@ body{
   padding-bottom: 50px;
 }
 .foods{
-  display: flex;
+  display: block;
   gap: 40px;
   justify-content: center;
 }
 .stripimg{
+  display: block;
   border-radius: 50%;
   height: 20vh;
 }
-.foodlabel{
+.foodtype{
   display: flex;
   justify-content: center;
-  gap: 8rem;
-  padding: 8px;
-  font-size: 1em;
+  gap: 2em;
 }
-.brandlabel{
-  display: flex;
-  justify-content: center;
-  gap: 4rem;
-  padding: 8px;
-  font-size: 1em;
+.foodtype h4{
+  text-align: center;
 }
 h1{
   text-align: center;
+}
+.navbar a{
+  width: 70px;
+}
+#filter{
+  padding: 5px;
+  background-color: #f8f8f8;
+  width: 5em;
+  margin-bottom: 25px;
+  cursor: pointer;
+  border-width: thin;
+  border-radius: 5px;
+}
+#filter:hover{
+  background-color: lightgrey;
 }
