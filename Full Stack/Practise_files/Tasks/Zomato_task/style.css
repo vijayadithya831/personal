@@ -64,13 +64,21 @@ body{
 .foodtype h4{
   text-align: center;
 }
+.brandtype{
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+.brandtype h4{
+  text-align: center;
+}
 h1{
   text-align: center;
 }
 .navbar a{
   width: 70px;
 }
-#filter{
+#filterbtn{
   padding: 5px;
   background-color: #f8f8f8;
   width: 5em;
@@ -79,6 +87,6 @@ h1{
   border-width: thin;
   border-radius: 5px;
 }
-#filter:hover{
+#filterbtn:hover{
   background-color: lightgrey;
 }
