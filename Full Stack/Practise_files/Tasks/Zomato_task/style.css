@@ -4,16 +4,20 @@ body{
 }
 .navbar{
   display: flex;
-  justify-content: center;
+  Justify-content: center;
   align-items: center;
   gap: 40px;
   margin: 30px;
+  /* position: sticky;
+  top: 0;
+  left: 0;
+  right: 0; */
 }
 #logo{
   height: 80px;
 }
 #searchbar{
-  padding: 15px;;
+  padding: 15px;
   width: 55%;
   border-radius: 10px;
   border: none;
