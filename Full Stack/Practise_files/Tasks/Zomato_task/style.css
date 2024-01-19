@@ -98,8 +98,30 @@ h1{
 #filterbtn:hover{
   background-color: lightgrey;
 }
+.footer{
+  width: 100%;
+  background-color: blue;
+}
 .blocks{
   display: flex;
   width: 100%;
-  gap: 6em;
+  column-gap: 5em;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.listitems{
+  list-style: none;
+  padding-inline-start: 0px;
+}
+li{
+  padding: 2px 0px;
+}
+.fa{
+  background-color: black;
+  border-radius: 50%;
+  color: white;
+  padding: 7px;
+}
+.footer .logo{
+  margin-left: 10px;
 }
