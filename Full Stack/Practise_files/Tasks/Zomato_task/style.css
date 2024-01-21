@@ -53,8 +53,6 @@ body{
 }
 .foods{
   display: block;
-  gap: 40px;
-  justify-content: center;
 }
 .stripimg{
   display: block;
@@ -63,8 +61,7 @@ body{
 }
 .foodtype{
   display: flex;
-  justify-content: center;
-  gap: 2em;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 .foodtype h4{
@@ -72,16 +69,12 @@ body{
 }
 .brandtype{
   display: flex;
-  justify-content: center;
-  gap: 2em;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 .brandtype h4{
   text-align: center;
   width: 9em;
-}
-h1{
-  text-align: center;
 }
 .navbar a{
   width: 70px;
@@ -102,7 +95,7 @@ h1{
   width: 100%;
   background-color: #f8f8f8;
 }
-.blocks{
+.lowerblock{
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -120,4 +113,37 @@ li{
   border-radius: 50%;
   color: white;
   padding: 7px;
+}
+.store img{
+  display: block;
+  width: 9em;
+  padding: 5px;
+}
+.foodrow{
+  display: flex;
+  justify-content: space-between;
+}
+.foodrow img{
+  width: 22em;
+  height: 16em;
+  margin: 0px;
+}
+.menu h3{
+  display: inline;
+}
+.right{
+  float: right;
+}
+#rating{
+  background-color: #267e3e;
+  color: white;
+  padding: 2px;
+  border-radius: 5px;
+}
+.offer{
+  position: absolute;
+  background-color: #256fef;
+  color: white;
+  padding: 2px;
+  margin: -50px 0px 0px 0px;
 }
