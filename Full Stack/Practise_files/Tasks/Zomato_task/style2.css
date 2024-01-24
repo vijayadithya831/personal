@@ -1,0 +1,32 @@
+body{
+    background: linear-gradient(to right, #4f4d4d, #bab8b8);
+    font-size: 3em;
+}
+.login{
+    width: max-content;
+    text-align: -webkit-center;
+    margin: auto;
+}
+#textbox{
+    padding: 10px;
+    width: 20em;
+    margin: 10px;
+}
+#otp{
+    background-color: #e03546;
+    color: white;
+}
+a{
+    color: #e03546;
+    text-decoration: none;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+.input{
+    padding: 10px;
+    width: max-content;
+}
