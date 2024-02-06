@@ -90,3 +90,72 @@ select * from stud_det where city='chennai' or city='madurai' or city='tiruppur'
 select * from stud_det where city in('chennai', 'madurai', 'tiruppur');
 -- or with and condition (different columns)
 select * from stud_det where (city='chennai' or city='madurai') and age = 22;
+
+
+create database db001;
+use db001;
+CREATE TABLE STUDENT_INFO  (Student_ID INT NOT NULL AUTO_INCREMENT,	
+Student_Name VARCHAR(20) NOT NULL,	City_State VARCHAR(15) NOT NULL,	
+Age INT NOT NULL,	Result VARCHAR(15) NOT NULL, 	Marks INT NOT NULL,PRIMARY KEY (STUDENT_ID));
+INSERT INTO STUDENT_INFO 
+ VALUES (1,	'Vasanth',	'Erode',	21,	'NoRank',	37),
+(2,	'Guru',	'Tiruppur',	20,	'NoRank',	28),
+(3,	'Gokul',	'Tiruchirapalli',	18,	'Average',	40),
+(4,	'Mani',	'Kumarapalayam',	24,	'NoRank',	31),
+(5,	'Moorthy',	'Salem',	18,	'VeryGood',	86),
+(6,	'Amutha',	'Chennai',	17,	'Average',	61),
+(7,	'Jaga',	'Madurai',	24,	'VeryGood',	89),
+(8,	'Pavithra',	'Erode',	23,	'Average',	68),
+(9,	'Arthi',	'Tiruppur',	17,	'Average',	53),
+(10,	'Kabilan',	'Tiruchirapalli',	24,	'Average',	67),
+(11,	'Manasi',	'Kumarapalayam',	17,	'Excellent',	97),
+(12,	'Suja',	'Salem',	23,	'VeryGood	', 85),
+(13,	'Arun',	'Chennai',	22,	'NoRank',	32),
+(14,	'Deepa',	'Madurai',	20,	'Average',	49),
+(15,	'Sindhu',	'Erode',	22,	'Average',	65),
+(16,	'Madhavi',	'Tiruppur',	20,	'Good',	78),
+(17,	'Swetha',	'Tiruchirapalli',	17,	'Good',	73),
+(18,	'Selvi',	'Kumarapalayam',	22,	'Average',	47),
+(19,	'Pooja',	'Salem',	19,	'VeryGood',	88),
+(20,	'Lakshmi',	'Chennai',	17,	'Excellent',	99),
+(21,	'Veeramani',	'Madurai',	21,	'Average',	67),
+(22,	'Pandian',	'Erode',	21,	'Good',	72),
+(23,	'Veera',	'Tiruppur',	20,	'Average',	51),
+(24,	'Devi',	'Tiruchirapalli',	20,	'Excellent',	96),
+(25,	'Devan',	'Kumarapalayam',	21,	'Excellent',	100),
+(26,	'Keerthi',	'Salem',	17,	'VeryGood	',89),
+(27,	'Venkatesh',	'Chennai',	24,	'Good',	75),
+(28,	'Raja',	'Madurai',	24,	'Average',	42);
+
+-- filtering values
+select student_name, city_state, marks from student_info;
+
+select * from student_info;
+
+select * from student_info where city_state = 'chennai' and result = 'average' order by city_state;
+
+select * from student_info where (city_state = 'chennai' or city_state = 'madurai') and result = 'average';
+
+select * from student_info where city_state not in('chennai', 'madurai', 'salem');
+
+select * from student_info where marks >= 89;
+
+select count(*) as total_count from student_info;
+
+select count(distinct(city_state)) as unique_city_count from student_info;
+
+-- group by
+select city_state, count(student_id) as student_city from student_info group by city_state;
+
+-- order by
+select * from student_info order by student_name desc;
+
+select * from student_info order by marks desc;
+
+-- limit condition (given in 2 arguements, first one indicates the nth row, so that (n+1)th row is taken as first row to return, and the 2nd arguement indicates the number of rows that is needed to be returned
+select * from student_info order by student_id limit 12,5;
+
+-- like (applied mostly in strings
+select * from student_info where student_name not like '%a%r%';
+select * from student_info where student_name like '__r_';
+-- select city_state, count(student_id) as student_count from student_info group by city_state having age = 20 order by student_id (i wanna figure this out soon);
