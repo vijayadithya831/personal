@@ -156,6 +156,41 @@ select * from student_info order by marks desc;
 select * from student_info order by student_id limit 12,5;
 
 -- like (applied mostly in strings
+-- the position of the percentage symbols indicate where you are relating the data with
 select * from student_info where student_name not like '%a%r%';
 select * from student_info where student_name like '__r_';
 -- select city_state, count(student_id) as student_count from student_info group by city_state having age = 20 order by student_id (i wanna figure this out soon);
+
+-- between
+select * from student_info where marks between 21 and 31;
+select * from student_info;
+-- methods
+select sum(marks) from student_info;
+select sum(marks) from student_info where student_id in(25, 20, 11, 24);
+
+-- round funtion, the number after the attribute indicates the number of decimal places after the decimal point to be rounded and displayed.
+select round(avg(marks),0) from student_info;
+-- min and max
+-- normal method
+select min(marks) from student_info;
+select * from student_info where marks = 28;
+-- inner query(nested query)
+select * from student_info  where marks = (select min(marks) from student_info);
+-- usage of inner query is not allowed when the class is taken LOL
+create table student_det (student_id int, student_name varchar(30),
+student_initial varchar(25), marks int, Gender varchar(30),
+primary key(student_id));
+
+insert into Student_det values
+(14001,	'Guru',	'L',	35,	'Male'),
+(14002,	'Gopi',	'S',	54,	'Male'),
+(14003,	'Sudhakar',	'D',	78,	'Male');
+
+select * from student_det;
+-- string functions
+select *, lcase(student_name) as lcase_name, ucase(student_name) as ucase_name from student_det;
+select left(student_id, 2) as default_id from student_det;-- takes the left most n characters/individual elements (n is the number mentioned)
+select right(student_id, 3) as student_id from student_det;-- takes the right most n characters/individual elements (n is the number mentioned)
+-- combination
+select left(student_id,2) as default_id, right(student_id,3) as student_id from student_det;
+select *, concat(student_name, ' ', student_initial) as student_full_name from student_det;
