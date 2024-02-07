@@ -194,3 +194,6 @@ select right(student_id, 3) as student_id from student_det;-- takes the right mo
 -- combination
 select left(student_id,2) as default_id, right(student_id,3) as student_id from student_det;
 select *, concat(student_name, ' ', student_initial) as student_full_name from student_det;
+
+-- length
+select length(student_name) from student_det;
