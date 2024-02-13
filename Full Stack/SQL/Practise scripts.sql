@@ -197,3 +197,233 @@ select *, concat(student_name, ' ', student_initial) as student_full_name from s
 
 -- length
 select length(student_name) from student_det;
+-- select right(name,4) from table_name where name like(% ____); this gives all the people's name who have only 4 characters in their lastname
+-- string functions continuation
+select left(student_id,2) as default_id, right(student_id,3) as student_id from student_det;
+
+-- mid function, same as left and right functions
+-- mid has 3 parameters, first is as usual the field name, 2nd is the starting character count that is the nth character we have to start from, and the 3rd paramter is the number of characters we need from the nth character.
+select mid(student_id, 3,2) from student_det;
+select *, concat(student_name, ' ', student_initial) as student_full_name from student_det;
+
+select trim(student_name) from student_det;
+select *, char_length(student_name) as student_name_length from student_det;
+select *, length(student_name) as student_name_length from student_det;
+
+select * from student_det where length(student_name) = 4;
+
+-- logical functions
+create table Att_info (Att_id int, student_name varchar(50),
+student_id int, Att_date date, Att_status varchar(25),
+Primary key(Att_id));
+
+insert into Att_info values
+(1,	'Vasanth',	1,	'2022-11-01' ,	' P'),
+(2,	'Vasanth',	1,	'2022-11-02' ,	' P'),
+(3,	'Vasanth',	1,	'2022-11-03' ,	' P'),
+(4,	'Vasanth',	1,	'2022-11-04' ,	' A'),
+(5,	'Guru',	2,	'2022-11-01' ,	' P'),
+(6,	'Guru',	2,	'2022-11-02' ,	' P'),
+(7,	'Guru',	2,	'2022-11-03' ,	' A'),
+(8,	'Guru',	2,	'2022-11-04' ,	' A'),
+(9,	'Gokul',	3,	'2022-11-01' ,	' A'),
+(10,	'Gokul',	3,	'2022-11-02' ,	' A'),
+(11,	'Gokul',	3,	'2022-11-03' ,	' P'),
+(12,	'Gokul',	3,	'2022-11-04' ,	' A'),
+(13,	'Mani',	4,	'2022-11-01' ,	' A'),
+(14,	'Mani',	4,	'2022-11-02' ,	' P'),
+(15,	'Mani',	4,	'2022-11-03' ,	' P'),
+(16,	'Mani',	4,	'2022-11-04' ,	' A'),
+(17,	'Moorthy',	5,	'2022-11-01' ,	' P'),
+(18,	'Moorthy',	5,	'2022-11-02' ,	' A'),
+(19,	'Moorthy',	5,	'2022-11-03' ,	' P'),
+(20,	'Moorthy',	5,	'2022-11-04' ,	' A'),
+(21,	'Amutha',	6,	'2022-11-01' ,	' P'),
+(22,	'Amutha',	6,	'2022-11-02' ,	' P'),
+(23,	'Amutha',	6,	'2022-11-03' ,	' A'),
+(24,	'Amutha',	6,	'2022-11-04' ,	' A'),
+(25,	'Jaga',	7,	'2022-11-01' ,	' A'),
+(26,	'Jaga',	7,	'2022-11-02' ,	' A'),
+(27,	'Jaga',	7,	'2022-11-03' ,	' P'),
+(28,	'Jaga',	7,	'2022-11-04' ,	' P'),
+(29,	'Pavithra',	8,	'2022-11-01' ,	' P'),
+(30,	'Pavithra',	8,	'2022-11-02' ,	' A'),
+(31,	'Pavithra',	8,	'2022-11-03' ,	' P'),
+(32,	'Pavithra',	8,	'2022-11-04' ,	' A'),
+(33,	'Arthi',	9,	'2022-11-01' ,	' A'),
+(34,	'Arthi',	9,	'2022-11-02' ,	' A'),
+(35,	'Arthi',	9,	'2022-11-03' ,	' A'),
+(36,	'Arthi',	9,	'2022-11-04' ,	' P'),
+(37,	'Kabilan',	10,	'2022-11-01' ,	' P'),
+(38,	'Kabilan',	10,	'2022-11-02' ,	' P'),
+(39,	'Kabilan',	10,	'2022-11-03' ,	' A'),
+(40,	'Kabilan',	10,	'2022-11-04' ,	' P'),
+(41,	'Manasi',	11,	'2022-11-01' ,	' P'),
+(42,	'Manasi',	11,	'2022-11-02' ,	' A'),
+(43,	'Manasi',	11,	'2022-11-03' ,	' A'),
+(44,	'Manasi',	11,	'2022-11-04' ,	' P'),
+(45,	'Suja',	12,	'2022-11-01' ,	' P'),
+(46,	'Suja',	12,	'2022-11-02' ,	' A'),
+(47,	'Suja',	12,	'2022-11-03' ,	' P'),
+(48,	'Suja',	12,	'2022-11-04' ,	' P'),
+(49,	'Arun',	13,	'2022-11-01' ,	' P'),
+(50,	'Arun',	13,	'2022-11-02' ,	' P'),
+(51,	'Arun',	13,	'2022-11-03' ,	' A'),
+(52,	'Arun',	13,	'2022-11-04' ,	' P'),
+(53,	'Deepa',	14,	'2022-11-01' ,	' P'),
+(54,	'Deepa',	14,	'2022-11-02' ,	' A'),
+(55,	'Deepa',	14,	'2022-11-03' ,	' P'),
+(56,	'Deepa',	14,	'2022-11-04' ,	' A'),
+(57,	'Sindhu',	15,	'2022-11-01' ,	' P'),
+(58,	'Sindhu',	15,	'2022-11-02' ,	' A'),
+(59,	'Sindhu',	15,	'2022-11-03' ,	' P'),
+(60,	'Sindhu',	15,	'2022-11-04' ,	' A'),
+(61,	'Madhavi',	16,	'2022-11-01' ,	' P'),
+(62,	'Madhavi',	16,	'2022-11-02' ,	' P'),
+(63,	'Madhavi',	16,	'2022-11-03' ,	' A'),
+(64,	'Madhavi',	16,	'2022-11-04' ,	' P'),
+(65,	'Swetha',	17,	'2022-11-01' ,	' A'),
+(66,	'Swetha',	17,	'2022-11-02' ,	' P'),
+(67,	'Swetha',	17,	'2022-11-03' ,	' P'),
+(68,	'Swetha',	17,	'2022-11-04' ,	' P'),
+(69,	'Selvi',	18,	'2022-11-01' ,	' P'),
+(70,	'Selvi',	18,	'2022-11-02' ,	' P'),
+(71,	'Selvi',	18,	'2022-11-03' ,	' P'),
+(72,	'Selvi',	18,	'2022-11-04' ,	' P'),
+(73,	'Pooja',	19,	'2022-11-01' ,	' A'),
+(74,	'Pooja',	19,	'2022-11-02' ,	' A'),
+(75,	'Pooja',	19,	'2022-11-03' ,	' A'),
+(76,	'Pooja',	19,	'2022-11-04' ,	' P'),
+(77,	'Lakshmi',	20,	'2022-11-01' ,	' A'),
+(78,	'Lakshmi',	20,	'2022-11-02' ,	' A'),
+(79,	'Lakshmi',	20,	'2022-11-03' ,	' P'),
+(80,	'Lakshmi',	20,	'2022-11-04' ,	' P'),
+(81,	'Veeramani',	21,	'2022-11-01' ,	' A'),
+(82,	'Veeramani',	21,	'2022-11-02' ,	' A'),
+(83,	'Veeramani',	21,	'2022-11-03' ,	' P'),
+(84,	'Veeramani',	21,	'2022-11-04' ,	' A'),
+(85,	'Pandian',	22,	'2022-11-01' , ' P'),
+(86,	'Pandian',	22,	'2022-11-02' , ' P'),
+(87,	'Pandian',	22,	'2022-11-03' ,	' P'),
+(88,	'Pandian',	22,	'2022-11-04' ,	' A'),
+(89,	'Veera',	23,	'2022-11-01' ,	' P'),
+(90,	'Veera',	23,	'2022-11-02' ,	' A'),
+(91,	'Veera',	23,	'2022-11-03' ,	' P'),
+(92,	'Veera',	23,	'2022-11-04' ,	' A'),
+(93,	'Devi',	24,	'2022-11-01' ,	' P'),
+(94,	'Devi',	24,	'2022-11-02' ,	' P'),
+(95,	'Devi',	24,	'2022-11-03' ,	' A'),
+(96,	'Devi',	24,	'2022-11-04' ,	' A'),
+(97,	'Devan',	25,	'2022-11-01' ,	' A'),
+(98,	'Devan',	25,	'2022-11-02' ,	' A'),
+(99,	'Devan',	25,	'2022-11-03' ,	' P'),
+(100,	'Devan',	25,	'2022-11-04' ,	' P'),
+(101,	'Keerthi',	26,	'2022-11-01' ,	' P'),
+(102,	'Keerthi',	26,	'2022-11-02' ,	' P'),
+(103,	'Keerthi',	26,	'2022-11-03' ,	' A'),
+(104,	'Keerthi',	26,	'2022-11-04' ,	' A'),
+(105,	'Venkatesh',	27,	'2022-11-01' ,	' P'),
+(106,	'Venkatesh',	27,	'2022-11-02' ,	' A'),
+(107,	'Venkatesh',	27,	'2022-11-03' ,	' P'),
+(108,	'Venkatesh',	27,	'2022-11-04' ,	' P'),
+(109,	'Raja',	28,	'2022-11-01' ,              ' P'),
+(110,	'Raja',	28,	'2022-11-02' ,               ' A'),
+(111,	'Raja',	28,	'2022-11-03' ,               ' P'),
+(112,	'Raja',	28,	'2022-11-04',' P');
+
+select * from att_info;
+
+-- working days calculation
+select student_name, count(att_date) as working_days from att_info group by student_name;
+
+
+
+
+-- date formatting
+create database employee1;
+use employee1;
+create table emp_info (Emp_No int, Emp_Name varchar(20), Job varchar(20), Mgr int, Hire_Date date, Sal int, Comm int, Dep_No int,
+Primary key (Emp_No));
+Insert into Emp_info (Emp_No, Emp_name, Job, mgr, Hire_date, Sal, Comm, Dep_no)
+values (7369,	'SMITH',	'CLERK',	7902,	'1980-12-17',	800,	Null,	20),
+(7499,	'ALLEN',	'SALESMAN',	7698,	'1981-02-20',	1600,	300,	30),
+(7521,	'WARD',	'SALESMAN',	7698,	'1981-02-22',	1250,	500,	30),
+(7566,	'JONES',	'MANAGER',	7839,	'1981-04-02',	2975,	Null,	20),
+(7654,	'MARTIN',	'SALESMAN',	7698,	'1981-09-28',	1250,	Null,	30),
+(7698,	'BLAKE',	'MANAGER',	7839,	'1981-05-01',	2850,	1400,	30),
+(7782,	'CLARK',	'MANAGER',	7839,	'1981-06-09',	2450,	Null,	10),
+(7788,	'SCOTT',	'ANALYST',	7566,	'1982-12-09',	3000,	Null,	20),
+(7839,	'KING',	'PRESIDENT',	Null,	'1981-11-17',	5000,	Null,	10),
+(7844,	'TURNER',	'SALESMAN',	7698,	'1981-09-08',	1500,	0,	30),
+(7876,	'ADAMS',	'CLERK',	7788,	'1983-01-12',	1100,	Null,	20),
+(7900,	'JAMES',	'CLERK',	7698,	'1981-12-03',	950,	Null,	30),
+(7902,	'FORD',	'ANALYST',	7566,	'1981-12-03',	3000,	Null,	20),
+(7934,	'MILLER',	'CLERK',	7782,	'1982-01-23',	1300,	Null,	10);
+-- datediff
+select *, round(datediff(curdate() ,hire_date)/30) as experience from emp_info;
+
+-- timestampdiff
+select *, timestampdiff(month, hire_date, curdate()) as emp_exp from emp_info;
+
+-- date format
+select *, date_format(hire_date,'%b') as month_name from emp_info;
+select *, date_format(hire_date,'%a') as day_name from emp_info;
+select *, date_format(hire_date,'%c') as month_num from emp_info;
+
+-- if we want to select the month, year or date in place of hire_date, we have to mannually give the column names to run that way
+-- further, we can store the above values in a separate table and work in that, instead of giving select, we give create table table name with the same syntax to select columns
+-- these columns will be the new columns in the new table
+
+select *, date_format(hire_date, '%M') as month_name from emp_info where date_format(hire_date, '%b') like '_a%';
+select *, date_format(hire_date, '%a') as day_name from emp_info;
+select *, date_format(hire_date, '%b') as month_name from emp_info;
+select *, date_format(hire_date, '%M') as month_full_name from emp_info;
+select *, date_format(hire_date, '%d') as date_num from emp_info;
+select *, date_format(hire_date, '%m') as month_num from emp_info;
+select *, date_format(hire_date, '%j') as day_of_year from emp_info;
+
+-- exercises
+-- display all the information from emp table (1)
+select * from emp_info;
+-- display unique jobs from emp table (2)
+select distinct(job) as jobs from emp_info;
+-- list emps in ascending order of their salaries (3)
+select emp_name, sal from emp_info order by sal;
+-- asc of dep num, desc of jobs (4)
+select * from emp_info order by dep_no;
+select * from emp_info order by job desc;
+-- display all unique job groups in descending order (5)
+select distinct(job) as jobs from emp_info order by job desc;
+-- all details of mgrs (6)
+select * from emp_info where emp_no in (select mgr from emp_info);
+-- joined before 1981 (7)
+select * from emp_info where year(hire_date) < 1981;
+-- display empnum, name, sal daily sal from emp info in asc order of annual sal (8)
+-- method 1
+select *, sal/31 as daily_sal, sal*12 as annual_sal from emp_info order by sal*12;
+-- method 2
+create table sal_det as select *, sal/31 as daily_sal, sal*12 as annual_sal from emp_info;
+-- whose comm is greater than their salary (9)
+select * from emp_info where comm > sal;
+-- asc order of designations of those who joined after second half of 1981 (10)
+select * from emp_info where year(hire_date) >= 1981 and month(hire_date) >= 6 order by job;
+-- emp list along with experience and daily sal more than 100 (11)
+select *, (datediff(curdate(), hire_date))/365 as experience from emp_info where sal/30 >= 100;
+-- either clerk or analyst in desc order of name (12)
+select * from emp_info where job in ('clerk', 'analyst') order by emp_name desc;
+-- emp joined on 1 may '81. 3 dec '81, 17 dec '81, 19 jan '80 in ascending order of seniority (13)
+select * from emp_info where hire_date in ('1981-05-01', '1981-12-03', '1981-12-17', '1980-01-19') order by hire_date desc;
+-- dept num 10 or 20 (14)
+select * from emp_info where dep_no in (10, 20);
+-- joined in the year 1981 (15)
+select * from emp_info where year(hire_date) = 1981;
+-- joined in the month of aug 1980 (16)
+select * from emp_info where month(hire_date) = 8 and year(hire_date) = 1980;
+-- annual salary ranging from 22000 and 45000 (17)
+select *, sal*12 as annual_sal from emp_info where sal*12 between 22000 and 45000;
+-- having 5 characters in their names (18)
+select * from emp_info where length(emp_name) = 5;
+-- empno, empname, job, hiredate, exp of all managers (19)
+select emp_no, emp_name, job, hire_date, datediff(curdate(), hire_date)/365 as experience from emp_info where job = 'manager';
+-- empno, empname, sal, exp of emps working for manager 7369 (20)
+select emp_no, emp_name, sal, datediff(curdate(), hire_date)/365 as experience from emp_info where mgr = 7369;
