@@ -471,9 +471,14 @@ select * from sal_info;
 select * from emp_det inner join sal_info on emp_det.emp_id = sal_info.emp_id order by emp_det.emp_id;
 
 -- left join
-select * from emp_det e left join sal_info s on e.emp_id = s.emp_id order by e.emp_id;
+select * from emp_det e left join sal_info s on e.emp_id = s.emp_id;
 
+-- inserting extra value in right table to understand right join further
+insert into sal_info values(181, 8, '2023-07-23', 21000);
 -- right join
 select * from emp_det e right join sal_info s on e.emp_id = s.emp_id;
 
-insert into sal_info values(181, 8, '2023-07-23', 21000);
+-- full outer join (union is the keyword of full outer join)
+(select * from emp_det e left join sal_info s on e.emp_id = s.emp_id) union (select * from emp_det e right join sal_info s on e.emp_id = s.emp_id);
+
+
