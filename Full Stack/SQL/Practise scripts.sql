@@ -336,7 +336,7 @@ select * from att_info;
 -- working days calculation
 select student_name, count(att_date) as working_days from att_info group by student_name;
 
-select student_name, 
+
 
 
 
@@ -480,5 +480,3 @@ select * from emp_det e right join sal_info s on e.emp_id = s.emp_id;
 
 -- full outer join (union is the keyword of full outer join)
 (select * from emp_det e left join sal_info s on e.emp_id = s.emp_id) union (select * from emp_det e right join sal_info s on e.emp_id = s.emp_id);
-
-
