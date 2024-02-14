@@ -474,5 +474,6 @@ select * from emp_det inner join sal_info on emp_det.emp_id = sal_info.emp_id or
 select * from emp_det e left join sal_info s on e.emp_id = s.emp_id order by e.emp_id;
 
 -- right join
-select * from emp_det e right join sal_info s on e.emp_id = s.emp_id order by e.emp_id;
+select * from emp_det e right join sal_info s on e.emp_id = s.emp_id;
 
+insert into sal_info values(181, 8, '2023-07-23', 21000);
