@@ -330,11 +330,13 @@ insert into Att_info values
 (110,	'Raja',	28,	'2022-11-02' ,               ' A'),
 (111,	'Raja',	28,	'2022-11-03' ,               ' P'),
 (112,	'Raja',	28,	'2022-11-04',' P');
-
+ use besantpractice;
 select * from att_info;
 
 -- working days calculation
 select student_name, count(att_date) as working_days from att_info group by student_name;
+
+select student_name, 
 
 
 
@@ -426,4 +428,51 @@ select * from emp_info where length(emp_name) = 5;
 -- empno, empname, job, hiredate, exp of all managers (19)
 select emp_no, emp_name, job, hire_date, datediff(curdate(), hire_date)/365 as experience from emp_info where job = 'manager';
 -- empno, empname, sal, exp of emps working for manager 7369 (20)
-select emp_no, emp_name, sal, datediff(curdate(), hire_date)/365 as experience from emp_info where mgr = 7369;
+select emp_no, emp_name, sal, datediff(curdate(), hire_date)/365 as experience from emp_info where mgr = 7369; 
+
+-- joins
+create database accounts;
+use accounts;
+
+create table EMp_det (emp_id int, emp_name varchar(25),
+Designation varchar(30), date_of_join date,
+Primary key(Emp_id));
+
+
+insert into emp_det values
+(1,	'Guru',	   'Manager',	'2022-05-10'),
+(2,	'Gopi',	  'Junior Accountant',	'2022-05-12'),
+(3,	'Mani',	   'Senior Manager',	'2022-05-15'),
+(4,	'Moorthy', 	   'HR',	'2022-05-20'),
+(5,	'Muthu',	 'General Manager',	'2022-05-23'),
+(6,	'Abhi',	 'Associate',	'2022-06-05');
+
+
+
+
+create table sal_info (sal_id int, emp_id int, sal_date date,
+amount int, primary key(sal_id));
+
+
+insert into sal_info values
+(121,	1,	'2022-06-10',	10000),
+(156,	2,	'2022-06-12',	18000),
+(134,	3,	'2022-06-15',	12000),
+(167,	4,	'2022-06-20',	16000),
+(178,	5,	'2022-06-23',	12000);
+
+-- left table
+select * from emp_det;
+
+-- right table
+select * from sal_info;
+
+-- inner join
+select * from emp_det inner join sal_info on emp_det.emp_id = sal_info.emp_id order by emp_det.emp_id;
+
+-- left join
+select * from emp_det e left join sal_info s on e.emp_id = s.emp_id order by e.emp_id;
+
+-- right join
+select * from emp_det e right join sal_info s on e.emp_id = s.emp_id order by e.emp_id;
+
