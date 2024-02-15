@@ -480,3 +480,108 @@ select * from emp_det e right join sal_info s on e.emp_id = s.emp_id;
 
 -- full outer join (union is the keyword of full outer join)
 (select * from emp_det e left join sal_info s on e.emp_id = s.emp_id) union (select * from emp_det e right join sal_info s on e.emp_id = s.emp_id);
+
+
+create database joins;
+use joins;
+
+create table student_info(student_id int primary key auto_increment, student_name varchar(30), city_state varchar(20), age int, roll_no int, community varchar(5), course_id int);
+
+insert into student_info values
+(1,	'Vasanth',	'Erode',	21,	13001,	'BC',	1),
+(2,	'Guru',	'Tiruppur',	20,	13002,	'MBC',	1),
+(3,	'Gokul',	'Tiruchirapalli',	18,	13003,	'SC',	1),
+(4,	'Mani',	'Kumarapalayam',	24,	13004,	'BC',	1),
+(5,	'Moorthy',	'Salem',	18,	13005,	'MBC',	2),
+(6,	'Amutha',	'Chennai',	17,	13006,	'SC',	2),
+(7,	'Jaga',	'Madurai',	24,	13007,	'BC',	2),
+(8,	'Pavithra',	'Erode',	23,	13008,	'MBC',	2),
+(9,	'Arthi',	'Tiruppur',	17,	13009,	'SC',	3),
+(10,	'Kabilan',	'Tiruchirapalli',	24,	13010,	'BC',	3),
+(11,	'Manasi',	'Kumarapalayam',	17,	13011,	'MBC',	3),
+(12,	'Suja',	'Salem',	23,	13012,	'SC',	3),
+(13,	'Arun',	'Chennai',	22,	13013,	'BC',	3),
+(14,	'Deepa',	'Madurai',	20,	13014,	'MBC',	1),
+(15,	'Sindhu',	'Erode',	22,	13015,	'SC',	1),
+(16,	'Madhavi',	'Tiruppur',	20,	13016,	'BC',	1),
+(17,	'Swetha',	'Tiruchirapalli',	17,	13017,	'MBC',	1),
+(18,	'Selvi',	'Kumarapalayam',	22,	13018,	'SC',	3),
+(19,	'Pooja',	'Salem',	19,	13019,	'BC',	1),
+(20,	'Lakshmi',	'Chennai',	17,	13020,	'MBC',	2),
+(21,	'Veeramani',	'Madurai',	21,	13021,	'SC',	1),
+(22,	'Pandian',	'Erode',	21,	13022,	'BC',	1),
+(23,	'Veera',	'Tiruppur',	20,	13023,	'MBC',	2),
+(24,	'Devi',	'Tiruchirapalli',	20,	13024,	'SC',	3),
+(25,	'Devan',	'Kumarapalayam',	21,	13025,	'BC',	1),
+(26,	'Keerthi',	'Salem',	17,	13026,	'MBC',	2),
+(27,	'Venkatesh',	'Chennai',	24,	13027,	'SC',	1),
+(28,	'Raja',	'Madurai',	24,	13028,	'SC',	3);
+
+create table course_info(course_id int primary key, course_name varchar(15));
+
+insert into course_info values
+(1,	'CMA'),
+(2,	'CA'),
+(3,	'CS');
+
+create table marks_info(marks_id int primary key, student_id int, finance int, cost int, corporate int);
+
+insert into marks_info values
+(14001,	1,	75,	76,	65),
+(14002,	2,	92,	90,	19),
+(14003,	3,	38,	37,	46),
+(14004,	4,	39,	90,	58),
+(14005,	5,	34,	89,	20),
+(14006,	6,	44,	38,	60),
+(14007,	7,	50,	26,	98),
+(14008,	8,	59,	78,	82),
+(14009,	9,	89,	47,	88),
+(14010,	10,	20,	25,	100),
+(14011,	11,	74,	50,	100),
+(14012,	12,	81,	62,	31),
+(14013,	13,	60,	19,	33),
+(14014,	14,	77,	22,	23),
+(14015,	15,	68,	38,	35),
+(14016,	16,	31,	60,	83),
+(14017,	17,	83,	53,	79),
+(14018,	18,	37,	79,	88),
+(14019,	19,	55,	76,	76),
+(14020,	20,	25,	40,	81),
+(14021,	21,	38,	87,	48),
+(14022,	22,	84,	63,	72),
+(14023,	23,	80,	44,	64),
+(14024,	24,	53,	46,	59),
+(14025,	25,	79,	48,	94),
+(14026,	26,	48,	66,	70),
+(14027,	27,	61,	45,	74),
+(14028,	28,	24,	95,	58);
+
+select * from student_info;
+select * from course_info;
+select * from marks_info;
+
+
+select course_name, count(student_id) as student_count from course_info c, student_info s where c.course_id = s.course_id group by course_name;
+select course_name, count(student_id) as student_count from course_info c join student_info s on c.course_id = s.course_id group by course_name;
+
+select s.student_id, s.roll_no, s.student_name, (m.finance + m.cost + m.corporate) as total_marks from student_info s join marks_info m on s.student_id = m.student_id;
+
+
+select s.student_id, s.student_name, s.city_state, s.roll_no, s.course_id, c.course_name, m.marks_id, m.finance, m.cost, m.corporate
+from student_info s inner join course_info c on s.course_id = c.course_id inner join marks_info m on s.student_id = m.student_id;
+
+insert into course_info value(4, 'Tally_prime');
+
+delete from marks_info where marks_id in(14027, 14028);
+insert into marks_info values
+(14027,	27,	61,	45,	74),
+(14028,	28,	24,	95,	58);
+
+
+-- if you specify the direction of join according to the table which has higher number of values, the associated with it containing lesser number of values will display null
+-- below example shows that student info does not contain 4th course so it shows null in student table here course is 
+
+create table stu_course_marks as select s.student_id, s.student_name, s.city_state, s.roll_no, c.course_id, c.course_name, m.marks_id, m.finance, m.cost, m.corporate
+from student_info s right join course_info c on s.course_id = c.course_id left join marks_info m on s.student_id = m.student_id order by s.student_id;
+
+select * from stu_course_marks;
