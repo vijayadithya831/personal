@@ -585,3 +585,53 @@ create table stu_course_marks as select s.student_id, s.student_name, s.city_sta
 from student_info s right join course_info c on s.course_id = c.course_id left join marks_info m on s.student_id = m.student_id order by s.student_id;
 
 select * from stu_course_marks;
+-- results
+select *,(m.finance + m.cost + m.corporate) as total_marks, round((m.finance + m.cost + m.corporate)/3,0) as average_marks,
+case
+	when round((m.finance + m.cost + m.corporate)/3,0) >=35
+		then "pass"
+	else "fail"
+end as results from student_info s inner join course_info c on s.course_id = c.course_id inner join marks_info m on s.student_id = m.student_id order by s.student_id; 
+-- sub wise result
+select *,(m.finance + m.cost + m.corporate) as total_marks, round((m.finance + m.cost + m.corporate)/3,0) as average_marks,
+case
+	when m.finance >= 35
+		then "pass"
+	else "fail"
+end as finance_results,
+case
+	when m.cost >= 35
+		then "pass"
+	else "fail"
+end as cost_results,
+case
+	when m.corporate >= 35
+		then "pass"
+	else "fail"
+end as corporate_results
+from student_info s inner join course_info c on s.course_id = c.course_id inner join marks_info m on s.student_id = m.student_id order by s.student_id;
+-- all sub pass
+select *,(m.finance + m.cost + m.corporate) as total_marks, round((m.finance + m.cost + m.corporate)/3,0) as average_marks,
+case
+	when m.finance >= 35 and m.cost >= 35 and m.corporate >= 35
+		then "pass"
+	else "fail"
+end as end_results from student_info s inner join course_info c on s.course_id = c.course_id inner join marks_info m on s.student_id = m.student_id order by s.student_id; 
+-- sub wise pass check and grade assignment
+select *,(m.finance + m.cost + m.corporate) as total_marks, round((m.finance + m.cost + m.corporate)/3,0) as average_marks,
+case
+	when m.finance >= 35 and m.cost >= 35 and m.corporate >= 35
+		then case
+			when round((m.finance + m.cost + m.corporate)/3,0) between 91 and 100
+				then "O"
+			when round((m.finance + m.cost + m.corporate)/3,0) between 81 and 90
+				then "A"
+			when round((m.finance + m.cost + m.corporate)/3,0) between 71 and 80
+				then "B"
+			when round((m.finance + m.cost + m.corporate)/3,0) between 51 and 70
+				then "C"
+			else "D"
+			end
+		else "No Grade"
+end as grade
+from student_info s inner join course_info c on s.course_id = c.course_id inner join marks_info m on s.student_id = m.student_id order by s.student_id; 
