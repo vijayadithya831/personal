@@ -635,3 +635,26 @@ case
 		else "No Grade"
 end as grade
 from student_info s inner join course_info c on s.course_id = c.course_id inner join marks_info m on s.student_id = m.student_id order by s.student_id; 
+
+-- students studying CA
+select *,(m.finance + m.cost + m.corporate) as total_marks, round((m.finance + m.cost + m.corporate)/3,0) as average_marks,
+case
+	when c.course_name = "CA"
+		then case
+		when m.finance >= 35 and m.cost >= 35 and m.corporate >= 35
+			then case
+				when round((m.finance + m.cost + m.corporate)/3,0) between 91 and 100
+					then "O"
+				when round((m.finance + m.cost + m.corporate)/3,0) between 81 and 90
+					then "A"
+				when round((m.finance + m.cost + m.corporate)/3,0) between 71 and 80
+					then "B"
+				when round((m.finance + m.cost + m.corporate)/3,0) between 51 and 70
+					then "C"
+				else "D"
+				end
+			else "No Grade"
+		end
+        else "NOT CA"
+end as CA_grade
+from student_info s inner join course_info c on s.course_id = c.course_id inner join marks_info m on s.student_id = m.student_id order by s.student_id; 
