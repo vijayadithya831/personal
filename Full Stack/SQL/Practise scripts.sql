@@ -336,6 +336,13 @@ select * from att_info;
 -- working days calculation
 select student_name, count(att_date) as working_days from att_info group by student_name;
 
+select *, if(trim(att_status) = 'p', '1', '0') as present_count from att_info;
+-- present count without if
+select student_name, count(att_status) as individual_present_count from att_info where att_status = ' p' group by student_name;
+-- present count and absent count using if
+select student_name, count(if(att_status = ' p', '1', null)) as present_count, count(if(att_status = ' a', '1', null)) as absent_count
+from att_info group by student_name order by student_name;
+
 
 
 
