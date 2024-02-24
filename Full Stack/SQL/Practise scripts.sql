@@ -343,9 +343,40 @@ select student_name, count(att_status) as individual_present_count from att_info
 select student_name, count(if(att_status = ' p', '1', null)) as present_count, count(if(att_status = ' a', '1', null)) as absent_count
 from att_info group by student_name order by student_name;
 
+-- creating new table in new database
+create table student_info(roll_no int primary key, student_name varchar(25),
+						  tamil int, english int, accounts int, commerce int, economics int,
+                          total int, average int);
+
+insert into student_info values
+(100301,	'Govind',	89,	84,	85,	87,	95,	440,	88),
+(100302,	'Priya',	78,	54,	95,	45,	55,	327,	65.4),
+(100303,	'Ganesh',	63,	64,	67,	68,	75,	337,	67.4),
+(100304,	'Keerthi',	15,	12,	45,	55,	32,	159,	31.8),
+(100305,	'Murali',	88,	92,	94,	97,	91,	462,	92.4),
+(100306,	'Venkatesh',	45,	15,	56,	50,	70,	236,	47.2),
+(100307,	'Bala',	76,	65,	97,	54,	90,	382,	76.4);
 
 
+select * from student_info;
+-- if statement again
+select *, if(average >= 35, 'Pass', 'Fail') as result from student_info;
+-- if with and
+select *, if((tamil <= 35) or (english <=35) or (accounts <= 35) or (commerce <= 35) or (economics <= 35)
+		   , 'Fail', 'Pass') as sub_wise_results from student_info;
+select * from student_info;
+-- join trigger
+select *, (tamil+english+accounts+commerce+economics) as total,
+round((tamil+english+accounts+commerce+economics)/5,0) as average from student_info;
 
+-- making this output as a new table is called join trigger. below is the syntax
+create table student_marks as select *, (tamil+english+accounts+commerce+economics) as total,
+round((tamil+english+accounts+commerce+economics)/5,0) as average from student_info;
+
+show tables;
+-- student_marks is the newly created table using join trigger
+
+select * from emp_info;
 
 
 -- date formatting
@@ -380,7 +411,7 @@ select *, date_format(hire_date,'%a') as day_name from emp_info;
 select *, date_format(hire_date,'%c') as month_num from emp_info;
 
 -- if we want to select the month, year or date in place of hire_date, we have to mannually give the column names to run that way
--- further, we can store the above values in a separate table and work in that, instead of giving select, we give create table table name with the same syntax to select columns
+-- further, we can store the above values in a separate table and work in that, instead of giving select, we give create table table name with the same syntax to select columns (aka join trigger)
 -- these columns will be the new columns in the new table
 
 select *, date_format(hire_date, '%M') as month_name from emp_info where date_format(hire_date, '%b') like '_a%';
