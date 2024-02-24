@@ -378,7 +378,13 @@ show tables;
 
 select * from emp_info;
 
-
+-- date add function
+select *, date_add(hire_date, interval -3 month) as dateadd from emp_info;
+-- curdate gives us today's date
+select *, datediff(hire_date, curdate()) as exp_days from emp_info;-- this statement gives negative ans
+select *, datediff(curdate(), hire_date) as exp_days from emp_info;
+-- we can convert days to months and years by dividing by number
+-- or we can use timestampdiff function (given below)
 -- date formatting
 create database employee1;
 use employee1;
