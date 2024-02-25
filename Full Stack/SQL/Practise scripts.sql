@@ -702,3 +702,55 @@ case
         else "NOT CA"
 end as CA_grade
 from student_info s inner join course_info c on s.course_id = c.course_id inner join marks_info m on s.student_id = m.student_id order by s.student_id; 
+
+
+-- another example for case end
+create table student_det (student_id int, student_name
+varchar(35), city_state varchar(35),
+age int, Result varchar(40), marks int,
+primary key(Student_id));
+
+insert into student_det values
+(1,	'Vasanth',	'Erode',	21,	'NoRank',	37),
+(2,	'Guru',	'Tiruppur',	20,	'NoRank',	28),
+(3,	'Gokul',	'Tiruchirapalli',	18,	'Average',	40),
+(4,	'Mani',	'Kumarapalayam',	24,	'NoRank',	31),
+(5,	'Moorthy',	'Salem',	18,	'VeryGood',	86),
+(6,	'Amutha',	'Chennai',	17,	'Average',	61),
+(7,	'Jaga',	'Madurai',	24,	'VeryGood',	89),
+(8,	'Pavithra',	'Erode',	23,	'Average',	68),
+(9,	'Arthi',	'Tiruppur',	17,	'Average',	53),
+(10,	'Kabilan',	'Tiruchirapalli',	24,	'Average',	67),
+(11,	'Manasi',	'Kumarapalayam',	17,	'Excellent',	97),
+(12,	'Suja',	'Salem',	23,	'VeryGood	', 85),
+(13,	'Arun',	'Chennai',	22,	'NoRank',	32),
+(14,	'Deepa',	'Madurai',	20,	'Average',	49),
+(15,	'Sindhu',	'Erode',	22,	'Average',	65),
+(16,	'Madhavi',	'Tiruppur',	20,	'Good',	78),
+(17,	'Swetha',	'Tiruchirapalli',	17,	'Good',	73),
+(18,	'Selvi',	'Kumarapalayam',	22,	'Average',	47),
+(19,	'Pooja',	'Salem',	19,	'VeryGood',	88),
+(20,	'Lakshmi',	'Chennai',	17,	'Excellent',	99),
+(21,	'Veeramani',	'Madurai',	21,	'Average',	67),
+(22,	'Pandian',	'Erode',	21,	'Good',	72),
+(23,	'Veera',	'Tiruppur',	20,	'Average',	51),
+(24,	'Devi',	'Tiruchirapalli',	20,	'Excellent',	96),
+(25,	'Devan',	'Kumarapalayam',	21,	'Excellent',	100),
+(26,	'Keerthi',	'Salem',	17,	'VeryGood	',89),
+(27,	'Venkatesh',	'Chennai',	24,	'Good',	75),
+(28,	'Raja',	'Madurai',	24,	'Average',	42);
+
+
+select * from student_det;
+
+select *,
+case
+	when city_state = 'erode' then 500
+    when city_state = 'tiruppur' then 700
+    when city_state = 'tiruchirapalli' then 400
+    when city_state = 'kumarapalayam' then 350
+    when city_state = 'salem' then 700
+    when city_state = 'chennai' then 800
+    when city_state = 'madurai' then 1000
+end as bus_pass_amount from student_det;
+
