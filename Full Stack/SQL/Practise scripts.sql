@@ -778,3 +778,49 @@ end as bus_pass_amount from student_det;
 end //
 delimiter ;
 
+call student_info;
+
+
+-- variables
+delimiter //
+create procedure store_data1()
+begin
+declare numbers int;
+set numbers = 150;
+select numbers;
+end //
+delimiter ;
+
+call store_data1;
+
+delimiter //
+create procedure store_date3()
+begin
+declare city_count int;
+select count(city_state) into city_count from student_det;
+select city_count;
+end //
+delimiter ;
+-- storedate3() has been edited inside the navigator column... find out which database u r working on,
+-- navigate to stored procedures, right click on your current procedure and click alter stored procedure
+-- there we can edit whatever we want to edit in our procedure.
+call store_date3;
+
+
+-- a trigger is a stored program which is automatically fired or executed when some events occur
+-- a row level trigger deals within the specific table for each row updated, inserted or deleted
+-- where as statement level trigger deals with multiple tables for each statement executed.
+
+-- trigger timings
+# before insert
+# after insert
+# before update
+# after update
+# before delete
+# after delete
+
+-- trigger example
+create database triggers001;
+use triggers001;
+
+-- row level trigger
