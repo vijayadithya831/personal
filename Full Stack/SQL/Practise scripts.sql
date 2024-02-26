@@ -752,6 +752,29 @@ case
     when city_state = 'salem' then 700
     when city_state = 'chennai' then 800
     when city_state = 'madurai' then 1000
+else null
 end as bus_pass_amount from student_det;
 
+
+-- procedures
+select * from student_det;
+
+delimiter //
+create procedure student_info()
+begin
+select * from student_det where city_state in ('erode', 'salem');
+select * from student_det where age>=22;
+select *,
+case
+	when city_state = 'erode' then 500
+    when city_state = 'tiruppur' then 700
+    when city_state = 'tiruchirapalli' then 400
+    when city_state = 'kumarapalayam' then 350
+    when city_state = 'salem' then 700
+    when city_state = 'chennai' then 800
+    when city_state = 'madurai' then 1000
+else null    
+end as bus_pass_amount from student_det;
+end //
+delimiter ;
 
