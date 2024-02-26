@@ -754,3 +754,4 @@ case
     when city_state = 'madurai' then 1000
 end as bus_pass_amount from student_det;
 
+
