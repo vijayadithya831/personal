@@ -828,6 +828,9 @@ use triggers001;
 create table student_det (student_id int primary key, student_Name varchar(25), city_state varchar(30), age int,
 						  community varchar(20), marks int);
                           
+alter table student_Det modify community varchar(100);
+alter table student_det modify marks varchar(20);
+                          
 delimiter //
 create trigger age_check before insert on student_det for each row
 begin
@@ -840,3 +843,23 @@ insert into student_det values(2, 'Guru', 'Tiruppur', 20, 'MBC', 78),
 							  (3, 'Gokul', 'TIruchirapalli', -18, 'BC', 89);
 
 select * from student_Det;
+
+delimiter //
+create trigger community_check before insert on student_det for each row
+begin
+if new.community is null then set new.community = 'Kindly update your Community';
+end if;
+end //
+delimiter ;
+
+insert into student_det values (10, 'Kabilan', 'Tiruchirapalli', 24, null, 45);
+
+delimiter //
+create trigger marks_check before insert on student_det for each row
+begin
+if new.marks <=35 then set new.marks = 'Reappear';
+end if;
+end //
+delimiter ;
+
+insert into student_Det value (5, 'Abhijith', 'Chennai', 23, 'MBC', 25);
