@@ -1,0 +1,161 @@
+-SQL Basics
+-SQL Servers
+-DBMS SYSTEM
+-DBMS SYSTEM
+-Database
+-Data types
+  - Numeric Data type
+  - Date & Time Data type
+  - String Data type
+
+My SQL Main Commands
+- Create database (Create a New Database)
+- Show Databse (View Databases)
+- Drop Database
+- Alter Database (Modify Database)
+- Create Tables
+- Show tables
+- Insert Values
+- Drop Table
+- Alter table ( For New Column Creation)
+- Alter Table Modify
+- Alter table Drop ( Drop the Column)
+- ALter table Rename (Rename the Table)
+- Update Table ( To change the Values)
+- Delete Statement
+
+
+
+My SQL General Functions
+- Where
+- or
+- and
+- in
+- Not in
+- >
+- <
+- >=
+- <=
+- <> (Not equal to)
+- !
+- Count
+- Distinct
+- Count With Distinct
+- Order by Asc
+- Order By Desc
+- Group By
+- Limit
+- Desc Limit
+- Like (_%)
+- Not like
+- Between
+
+
+
+MY SQL Calculate Functions
+- Sum
+- Average
+- Min
+- Max
+- Count
+
+My SQL String Functions
+- LCase
+- UCase
+- Left
+- Right
+- Concat
+- Trim
+- Char_Length
+- Mid
+- Length
+
+My SQL Date Functions
+- Date ADD
+- Datediff
+- Timestamp DIff
+- Date Format
+- Year
+- Day
+- Month
+- Now
+
+Logical Functions
+- IF
+- If with and conditons
+- If with or conditions
+- Count If
+
+RDBMS System
+ -Two table connection
+ -Three table connection
+
+Join Queries
+- Inner Join
+- Left Join
+- Right Join
+- Cross join
+- Full Outer Join
+- Case and end
+- when
+- then
+- double case with end statement
+- case with and  statement
+- case with or statement
+- RDBMS with subqueries
+- having clause
+- basic joins Trigger (Create table after connections)
+
+Procedures concepts (SQL Automation)
+  - Procedure creation
+  - Begins & end
+  - call Procedures
+  - Alter procedures
+  - Declering variables
+  - Store variables
+
+Triggers (SQL Automation)
+  - trigger creation
+  - trigger timings
+      - before insert
+      - after insert
+      - before update
+      - after update
+      - before delete
+      - after delete
+  - Trigger with if statement
+  - trigger with else if statement
+  
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+Pl SQL - Procedural language Structured Query language
+
+        - Procedures
+        - Functions
+        - Loops
+        - Variables
+        - Triggers
+
+

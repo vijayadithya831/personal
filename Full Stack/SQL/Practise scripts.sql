@@ -824,3 +824,19 @@ create database triggers001;
 use triggers001;
 
 -- row level trigger
+
+create table student_det (student_id int primary key, student_Name varchar(25), city_state varchar(30), age int,
+						  community varchar(20), marks int);
+                          
+delimiter //
+create trigger age_check before insert on student_det for each row
+begin
+if new.age <= 0 then set new.age = 0;
+end if;
+end //
+delimiter ;
+
+insert into student_det values(2, 'Guru', 'Tiruppur', 20, 'MBC', 78),
+							  (3, 'Gokul', 'TIruchirapalli', -18, 'BC', 89);
+
+select * from student_Det;
