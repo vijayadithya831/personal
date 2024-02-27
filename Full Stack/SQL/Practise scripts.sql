@@ -863,3 +863,7 @@ end //
 delimiter ;
 
 insert into student_Det value (5, 'Abhijith', 'Chennai', 23, 'MBC', 25);
+
+insert into student_det value (6, 'Guru', 'tiruppur', -5, null, 19);
+
+select * from student_det;
