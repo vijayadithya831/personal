@@ -1,7 +1,7 @@
 -SQL Basics
 -SQL Servers
 -DBMS SYSTEM
--DBMS SYSTEM
+-RDBMS SYSTEM
 -Database
 -Data types
   - Numeric Data type
