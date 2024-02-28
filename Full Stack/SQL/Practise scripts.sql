@@ -904,3 +904,21 @@ insert into emp_info values(143001, 'Guru', '1998-04-28', 'veer245@gmail.com'),(
 
 select * from emp_info;
 select * from emp_comment;
+
+
+create table emp_det (emp_id int primary key, emp_name varchar(40), age int, daily_prod int);
+create table emp_salary (emp_id int primary key, salary int);
+
+delimiter //
+create trigger salary_calc after insert on emp_det for each row
+begin
+if new.daily_prod > 100 then insert into emp_salary values (new.emp_id, 1000);
+elseif new.daily_prod >= 80 then insert into emp_salary values (new.emp_id, 750);
+elseif new.daily_prod >= 65 then insert into emp_salary values (new.emp_id, 500);
+elseif new.daily_prod >= 40 then insert into emp_salary values (new.emp_id, 400);
+elseif new.daily_prod >= 0 then insert into emp_salary values (new.emp_id, 250);
+else insert into emp_salary values (new.emp_id, 0);
+end if;
+end //
+delimiter ;
+
