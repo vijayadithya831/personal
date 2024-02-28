@@ -867,3 +867,16 @@ insert into student_Det value (5, 'Abhijith', 'Chennai', 23, 'MBC', 25);
 insert into student_det value (6, 'Guru', 'tiruppur', -5, null, 19);
 
 select * from student_det;
+
+
+-- statement level trigger
+
+create table student_info (student_id int primary key, student_name varchar(40), city_state varchar(40), age int, community varchar(50), marks varchar(10));
+create table backup_info (student_id int primary key, student_name varchar(40), city_state varchar(40), age int, community varchar(50), marks varchar(10));
+
+demiliter //
+create trigger 
+begin
+
+end //
+delimiter ;
