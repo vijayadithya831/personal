@@ -874,9 +874,16 @@ select * from student_det;
 create table student_info (student_id int primary key, student_name varchar(40), city_state varchar(40), age int, community varchar(50), marks varchar(10));
 create table backup_info (student_id int primary key, student_name varchar(40), city_state varchar(40), age int, community varchar(50), marks varchar(10));
 
-demiliter //
-create trigger 
+delimiter //
+create trigger backup_update after insert on student_info for each row
 begin
-
+insert into backup_info(student_id, student_name, city_state, age, community, marks)
+values (new.student_id, new.student_name, new.city_state, new.age, new.community, new.marks);
 end //
 delimiter ;
+
+insert into student_info values (1, 'Vasanth', 'Erode', 21, 'BC', 32);
+
+select * from student_info;
+select * from backup_info;
+
