@@ -887,3 +887,20 @@ insert into student_info values (1, 'Vasanth', 'Erode', 21, 'BC', 32);
 select * from student_info;
 select * from backup_info;
 
+create table emp_info (emp_id int primary key, emp_name varchar(40), date_of_birth date, mail_id varchar(50));
+create table emp_comment (comment_id int primary key, comments varchar(100));
+
+
+delimiter //
+create trigger mail_check after insert on emp_info for each row
+begin
+if new.mail_id is null then insert into emp_comment (comment_id, comments)
+values (new.emp_id, concat('Hi ', new.emp_name, ', Kindly update your Mail_id'));
+end if;
+end //
+delimiter ;
+
+insert into emp_info values(143001, 'Guru', '1998-04-28', 'veer245@gmail.com'),(143002, 'Gopi', '1997-09-13', null);
+
+select * from emp_info;
+select * from emp_comment;
