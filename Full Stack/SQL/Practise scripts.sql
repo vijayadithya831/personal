@@ -921,4 +921,3 @@ else insert into emp_salary values (new.emp_id, 0);
 end if;
 end //
 delimiter ;
-
