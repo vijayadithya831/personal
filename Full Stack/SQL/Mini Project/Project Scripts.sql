@@ -1,5 +1,7 @@
 create database besantproject001;
 use besantproject001;
+show databases;
+
 -- all the tables are imported as csv files from local folders!
 show tables;
 select * from emp_details;
@@ -21,3 +23,5 @@ alter table dept_details add constraint primary key(dep_no);
 
 -- scripts
 
+create database dummy01;
+drop database dummy01;

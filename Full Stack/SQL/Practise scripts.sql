@@ -912,7 +912,7 @@ create table emp_salary (emp_id int primary key, salary int);
 delimiter //
 create trigger salary_calc after insert on emp_det for each row
 begin
-if new.daily_prod > 100 then insert into emp_salary values (new.emp_id, 1000);
+if new.daily_prod >= 100 then insert into emp_salary values (new.emp_id, 1000);
 elseif new.daily_prod >= 80 then insert into emp_salary values (new.emp_id, 750);
 elseif new.daily_prod >= 65 then insert into emp_salary values (new.emp_id, 500);
 elseif new.daily_prod >= 40 then insert into emp_salary values (new.emp_id, 400);
@@ -921,3 +921,50 @@ else insert into emp_salary values (new.emp_id, 0);
 end if;
 end //
 delimiter ;
+
+insert into emp_Det values
+(143003, 'Sudhakar', 21, 85),
+(143004, 'Sriram', 27, 89);
+
+select * from emp_det;
+select * from emp_Salary;
+
+-- same trigger created using case end
+delimiter //
+create trigger salary_eval after insert on emp_det for each row
+begin
+case
+	when new.daily_prod >= 100 then insert into emp_det values (new.emp_id, 1000);
+    when new.daily_prod >= 80 then insert into emp_det values (new.emp_id, 750);
+    when new.daily_prod >= 65 then insert into emp_det values (new.emp_id, 500);
+    when new.daily_prod >= 40 then insert into emp_det values (new.emp_id, 400);
+    when new.daily_prod >= 0 then insert into emp_det values (new.emp_id, 250);
+    
+end case;
+end //
+delimiter ;
+
+create table emp_info1 (emp_id int primary key, emp_name varchar(40), age int, salary int);
+alter table emp_info1 modify salary varchar(30);
+insert into emp_info1 values (143001, 'Guru', 21, 10000),(143002, 'Gopi', 27, 18000);
+
+delimiter //
+create trigger update_salary before update on emp_info1 for each row
+begin
+if new.salary >= 40000 then set new.salary = 'High Salary';
+elseif new.salary >= 35000 then set new.salary = 'Good Salary';
+elseif new.salary >= 15000 then set new.salary = 'Average Salary';
+elseif new.salary >= 0 then set new.salary = 'Low Salary';
+end if;
+end //
+delimiter ;
+
+update emp_info1 set salary = 25000 where emp_id = 143002;
+
+select * from emp_info1;
+
+update emp_info1 set salary = 50000 where emp_id = 143001;
+
+create table emp_salary1 (emp_id int primary key, sal_grade varchar(40));
+
+show tables;
