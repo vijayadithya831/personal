@@ -58,3 +58,9 @@ select * from sal_details where branch_id not in (241, 242);
 
 select * from sal_details where amount >= 25000;
 select * from sal_details where amount < 20000;
+select * from sal_details where amount = 28000;
+select * from sal_details where amount <> 28000;
+select * from emp_details;
+select count(emp_id) as dep_count from emp_details where dep_no = 50;
+select distinct(dep_no) as dep_nos from emp_details;
+select count(distinct(dep_no)) as dep_count from emp_Details;
