@@ -966,5 +966,56 @@ select * from emp_info1;
 update emp_info1 set salary = 50000 where emp_id = 143001;
 
 create table emp_salary1 (emp_id int primary key, sal_grade varchar(40));
+drop table emp_salary1;
+-- trigger for after update
+create table emp_info1 (emp_id int primary key, emp_name varchar(40), age int, salary varchar(50));
+create table emp_salary1 (emp_id int primary key, sal_grade varchar(40));
+
+delimiter //
+create trigger sal_grade_update after update on emp_info1 for each row
+begin
+if new.salary >= 40000 then insert into emp_salary1 values
+(new.emp_id, 'High Salary');
+elseif new.salary >= 35000 then insert into emp_salary1 values
+(new.emp_id, 'Good Salary');
+elseif new.salary >= 15000 then insert into emp_salary1 values
+(new.emp_id, 'Average Salary');
+elseif new.salary >= 0 then insert into emp_salary1 values
+(new.emp_id, 'Low Salary');
+end if;
+end //
+delimiter ;
+select * from emp_info1;
+insert into emp_info1 values
+(143001,	'Guru', 21,	10000),
+(143002,	'Gopi',	27,	18000),
+(143003,	'Mani',	28,	25000);
+
+update emp_info1 set salary = 50000 where emp_id = 143002;
+select * from emp_info1;
+select * from emp_salary1;
+
+
+
+
+-- delete trigger
 
 show tables;
+create table stu_info (stu_id int primary key, student_name varchar(40), city_state varchar(40), age int, community varchar(40), marks int);
+
+insert into stu_info values (1, 'Vasanth', 'Erode', 21, 'BC', 32),(2, 'Guru', 'TIruppur', 20, 'MBC', 78);
+
+create table stu_backup_info (stu_id int primary key, student_name varchar(40), city_state varchar(40), age int, community varchar(40), marks int);
+
+delimiter //
+create trigger stu_backup_update before delete on stu_info for each row
+begin
+insert into stu_backup_info values (old.stu_id, old.student_name, old.city_state, old.age, old.community, old.marks);
+end //
+delimiter ;
+
+select * from stu_info;
+select * from stu_backup_info;
+
+delete from stu_info where stu_id = 1;
+
