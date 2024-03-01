@@ -1019,3 +1019,5 @@ select * from stu_backup_info;
 
 delete from stu_info where stu_id = 1;
 
+-- after delete is not used often, but see net and learn.
+-- -------------------------------------X--X--X----------------------- the end
