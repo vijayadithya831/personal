@@ -13,7 +13,7 @@ describe sal_details;
 alter table sal_details add constraint primary key(salary_id);
 alter table sal_details rename column `branch id` to branch_id;
 alter table sal_details modify salary_date date;
-
+alter table sal_details modify branch_id int;
 select * from desig_details;
 describe desig_details;
 alter table desig_details add constraint primary key(designation_id);
@@ -121,3 +121,161 @@ case
     when s.amount >= 10000 then 'Low Salary'
 end as salary_grade from emp_details e inner join sal_details s on e.emp_id = s.emp_id;
 
+select e.emp_id, e.emp_name,
+case
+	when e.dep_no = 50 then case
+		when s.amount >= 30000 then s.amount/30
+	end
+end as production_daily_sal from emp_details e inner join dept_details d
+on e.dep_no = d.dep_no right join sal_details s on e.emp_id = s.emp_id where e.dep_no = 50;
+
+select e.emp_id, e.emp_name, ds.designation, dp.dep_name,
+case
+	when e.designation_id = 3004 and e.dep_no = 60
+		then datediff(curdate(), e.date_of_join)
+end as hr_experience from emp_details e inner join desig_details ds on e.designation_id = ds.designation_id
+inner join dept_details dp on e.dep_no = dp.dep_no where e.designation_id = 3004 and e.dep_no = 60;
+
+select e.emp_id, e.emp_name, ds.designation, dp.dep_name,
+case
+	when e.designation_id = 3003 or e.designation_id = 3007
+		then datediff(curdate(), e.date_of_join)
+end as senoir_experience from emp_details e inner join desig_details ds on e.designation_id = ds.designation_id
+inner join dept_details dp on e.dep_no = dp.dep_no where e.designation_id = 3003 or e.designation_id = 3007;
+
+select emp_id, emp_name, (select avg(amount) from sal_details) as average_salary from emp_Details;
+
+select dep_no, count(emp_id) as emp_count from emp_details group by dep_no having emp_count>1;
+
+create table employement_process as select e.emp_id, e.emp_name, e.date_of_join,
+s.salary_id, s.salary_date, s.amount, ds.designation_id, ds.designation, dp.dep_no,
+dp.dep_name, dp.branch_id, dp.branch_name
+from emp_details e inner join sal_details s on e.emp_id = s.emp_id
+inner join desig_details ds on e.designation_id = ds.designation_id
+inner join dept_details dp on e.dep_no = dp.dep_no order by e.emp_id;
+
+select * from employement_process;
+
+delimiter //
+create procedure display_all_tables()
+begin
+select * from emp_details;
+select * from sal_details;
+select * from desig_details;
+select * from dept_details;
+end //
+delimiter ;
+
+call display_all_tables;
+
+delimiter //
+create procedure calculate_average_salary()
+begin
+declare average int;
+select avg(amount) into average from sal_details;
+select average;
+end //
+delimiter ;
+
+call calculate_average_salary;
+
+delimiter //
+create trigger assign_dept before insert on emp_details for each row
+begin
+    if new.designation_id = 3004 or new.designation_id = 3007 then
+        set new.dep_no = 60;
+    end if;
+end //
+delimiter ;
+
+insert into emp_details values (17034, 'Vijay', 3004, 0, '2022-06-12');
+
+select * from emp_details;
+delete from emp_details where emp_id = 17034;
+
+
+
+create table emp_details_backup (emp_id int primary key, emp_name varchar(40), designation_id int, dep_no int, date_of_join date);
+
+delimiter //
+create trigger backup_emp_det after insert on emp_details for each row
+begin
+insert into emp_details_backup values
+(new.emp_id, new.emp_name, new.designation_id, new.dep_no, new.date_of_join);
+end //
+delimiter ;
+
+insert into emp_details values (17034, 'Vijay', 3004, 0, '2022-06-12');
+
+select * from emp_details;
+select * from emp_details_backup;
+
+select * from sal_details;
+
+insert into sal_details values (18034, 17034, '2022-07-12', 243, 25000);
+
+delimiter //
+create trigger sal_update before update on sal_details for each row
+begin
+if new.amount >=30000 and old.amount < 30000 then set new.amount = new.amount+100;
+end if;
+end //
+delimiter ;
+update sal_details set amount = 35000 where salary_id = 18034;
+select * from sal_details;
+describe sal_details;
+
+
+create table sal_details_backup
+(salary_id int primary key, emp_id int, salary_date date, branch_id int, amount varchar(40));
+
+delimiter //
+create trigger sal_update_backup after update on sal_details for each row
+begin
+if new.amount >= 30000 then insert into sal_details_backup values
+(new.salary_id, new.emp_id, new.salary_date, new.branch_id, 'High Salary');
+end if;
+end //
+delimiter ;
+
+select * from sal_details;
+update sal_details set amount = 35000 where salary_id = 18034;
+select * from sal_details_backup;
+
+select * from emp_details;
+select * from sal_details;
+select * from emp_details_backup;
+select * from sal_details_backup;
+
+delimiter //
+create trigger emp_deletion before delete on emp_details for each row
+begin
+insert into emp_details_backup values
+(old.emp_id, old.emp_name, old.designation_id, old.dep_no, old.date_of_join);
+end //
+delimiter ;
+
+delete from emp_details where emp_id = 17034;
+select * from emp_details_backup;
+
+delimiter //
+create trigger salary_grade after insert on sal_details for each row
+begin
+if new.amount >= 30000 then insert into sal_details_backup values
+(new.salary_id, new.emp_id, new.salary_date, new.branch_id, 'High Salary');
+elseif new.amount >= 20000 then insert into sal_details_backup values
+(new.salary_id, new.emp_id, new.salary_date, new.branch_id, 'Average Salary');
+elseif new.amount >= 10000 then insert into sal_details_backup values
+(new.salary_id, new.emp_id, new.salary_date, new.branch_id, 'Low Salary');
+else insert into sal_details_backup values
+(new.salary_id, new.emp_id, new.salary_date, new.branch_id, 'Poor Salary');
+end if;
+end //
+delimiter ;
+
+insert into sal_details values
+(18034, 17034, '2022-07-12', 243, 25000),
+(18035, 17035, '2022-09-23', 241, 34000),
+(18036, 17036, '2022-12-31', 242, 12000);
+select * from sal_details;
+select * from sal_details_backup;
