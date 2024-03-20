@@ -1,3 +1,3 @@
 n = int(input("Enter a number: "))
 for i in range(n):
-    print(i, end=' ')
+    print(i+1, end=' ')
