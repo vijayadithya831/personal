@@ -9,4 +9,4 @@
 2 - mid
 3 - smallest
 
-use this permutations to do the nested if problem
+use this permutations to do the nested if num compare problem

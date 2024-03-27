@@ -10,12 +10,3 @@ else:
     print(f"{num3} is greater than {num1} and {num2}")
 
 # complete this code using nested if and optimize it to the maximum
-if num1 > num2:
-    if num1 > num3:
-        print(f"{num1} is greater")
-    else:
-        print(f"{num3} is greater")
-elif num2 > num3:
-    print(f"{num2} is greater")
-else:
-    print(f"{num3} is greater")
