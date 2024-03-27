@@ -1,0 +1,12 @@
+123
+132
+213
+231
+312
+321
+
+1 - largest
+2 - mid
+3 - smallest
+
+use this permutations to do the nested if problem
