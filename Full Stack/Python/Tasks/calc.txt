@@ -1,0 +1,9 @@
+1. this task includes creating 7 functions which involves 7 arithmetic calculations
+
+input1, input2
+
+add, sub, prod, div, mod, floor, pow
+
+2. calculating circumference of circle using functions
+
+3. calculate hcf and lcm using functions
