@@ -26,6 +26,8 @@ elif op in ("floor", "floor division", "quotient"):
 elif op in ("exp", "exponent", "exponentiation", "pow", "power"):
     result = exp(num1,num2)
     print(f"The exponent value when {num1} is raised to the power {num2} is {round(result,2)}")
+else:
+    print("The specified operation is invalid!")
 
 
 
