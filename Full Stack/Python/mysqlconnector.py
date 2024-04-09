@@ -1,4 +1,4 @@
-
+from mysql.connector import *
 
 mydb = connect(
     user = "root",
