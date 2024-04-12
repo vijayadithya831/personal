@@ -5,55 +5,73 @@ window = Tk()
 window.title("Simple Calculator")
 window.iconbitmap("D:/Personal/Full Stack/Python/GUI/calculator.ico")
 
-entry = Entry(width = 60, borderwidth = 5)
-entry.grid()
+def btnClick(number):
+    current = entry.get()
+    entry.delete(0, END)
+    entry.insert(0, str(current) + str(number))
 
-btnOne = Button(window, text = "1", padx = 30, pady = 30)
-btnOne.grid(row = 0, column = 0)
+def btnAdd():
+    global fnum, math
+    math =1
+    first_number = entry.get()
+    entry.delete(0, END)
+    fnum = int(first_number)
 
-btnTwo = Button(window, text = "2", padx = 30, pady = 30)
-btnTwo.grid(row = 0, column = 1)
+def btnSub():
+    global fnum, math
+    math =1
+    first_number = entry.get()
+    entry.delete(0, END)
+    fnum = int(first_number)
 
-btnThree = Button(window, text = "3", padx = 30, pady = 30)
-btnThree.grid(row = 0, column = 2)
+def btnMul():
+    global fnum, math
+    math =1
+    first_number = entry.get()
+    entry.delete(0, END)
+    fnum = int(first_number)
 
-btnFour = Button(window, text = "4", padx = 30, pady = 30)
-btnFour.grid(row = 0, column = 3)
+def btnDiv():
+    global fnum, math
+    math =1
+    first_number = entry.get()
+    entry.delete(0, END)
+    fnum = int(first_number)
 
-btnFive = Button(window, text = "5", padx = 30, pady = 30)
-btnFive.grid(row = 1, column = 0)
+def btnEqual():
+    second_number = entry.get()
+    entry.delete(0, END)
+    snum = int(second_number)
 
-btnSix = Button(window, text = "6", padx = 30, pady = 30)
-btnSix.grid(row = 1, column = 1)
+    if math == 1:
+        entry.insert(fnum + snum)  
+    elif math == 2:
+        entry.insert(fnum - snum)
+    elif math == 3:
+        entry.insert(fnum * snum)
+    elif math == 4:
+        entry.insert(fnum / snum)
 
-btnSeven = Button(window, text = "7", padx = 30, pady = 30)
-btnSeven.grid(row = 1, column = 2)
+def btnClr():
+    entry.delete(0, END)
 
-btnEight = Button(window, text = "8", padx = 30, pady = 30)
-btnEight.grid(row = 1, column = 3)
+entry = Entry(width = 35, borderwidth = 5).grid(row = 0, column = 0, columnspan = 4)
 
-btnNine = Button(window, text = "9", padx = 30, pady = 30)
-btnNine.grid(row = 2, column = 0)
+btn1 = Button(window, text = 1, padx = 30, pady = 30, command = lambda: btnClick(1)).grid(row = 1, column = 0)
+btn2 = Button(window, text = 2, padx = 30, pady = 30, command = lambda: btnClick(2)).grid(row = 1, column = 1)
+btn3 = Button(window, text = 3, padx = 30, pady = 30, command = lambda: btnClick(3)).grid(row = 1, column = 2)
 
-btnZero = Button(window, text = "0", padx = 30, pady = 30)
-btnZero.grid(row = 2, column = 1)
+btn4 = Button(window, text = 4, padx = 30, pady = 30, command = lambda: btnClick(4)).grid(row = 2, column = 0)
+btn5 = Button(window, text = 5, padx = 30, pady = 30, command = lambda: btnClick(5)).grid(row = 2, column = 1)
+btn6 = Button(window, text = 6, padx = 30, pady = 30, command = lambda: btnClick(6)).grid(row = 2, column = 2)
 
-btnPlus = Button(window, text = "+", padx = 30, pady = 30)
-btnOne.grid(row = 2, column = 2)
+btn7 = Button(window, text = 7, padx = 30, pady = 30, command = lambda: btnClick(7)).grid(row = 3, column = 0)
+btn8 = Button(window, text = 8, padx = 30, pady = 30, command = lambda: btnClick(8)).grid(row = 3, column = 1)
+btn9 = Button(window, text = 9, padx = 30, pady = 30, command = lambda: btnClick(9)).grid(row = 3, column = 2)
+btn0 = Button(window, text = 0, padx = 30, pady = 30, command = lambda: btnClick(0)).grid(row = 4, column = 0)
 
-btnMinus = Button(window, text = "-", padx = 30, pady = 30)
-btnMinus.grid(row = 2, column = 3)
+btnClear = Button(window, text = "Clear", padx = 30, pady = 30).grid(row = 1, column = 4)
+btnPoint = Button(window, text = ".", padx = 31, pady = 30).grid()
 
-btnStar = Button(window, text = "*", padx = 30, pady = 30)
-btnStar.grid(row = 3, column = 0)
-
-btnSlash = Button(window, text = "/", padx = 30, pady = 30)
-btnSlash.grid(row = 3, column = 1)
-
-btnEqual = Button(window, text = "=", padx = 30, pady = 30)
-btnEqual.grid(row = 3, column = 2)
-
-btnPercent = Button(window, text = "%", padx = 30, pady = 30)
-btnPercent.grid(row = 3, column = 3)
 
 window.mainloop()
