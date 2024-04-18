@@ -1,9 +1,9 @@
-from django.views.decorators.csrf import csrf_exempt
+# from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render
 from myapp.models import Students
 
 # Create your views here.
-@csrf_exempt
+# @csrf_exempt
 def home(request):
     return render(request, "home.html")
 
