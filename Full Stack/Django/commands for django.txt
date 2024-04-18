@@ -1,0 +1,26 @@
+commands for django
+command for creating a project folder: django-admin startproject {march}
+
+{}=> project name
+
+creating an app inside a project: python manage.py startapp {besant}
+
+{}=> app name
+
+
+
+what to do after we include something new into our app
+
+go to settings.py, import os
+
+inside templates , inside 'DIRS', [os.path.join('BASE_DIR', "templates"0]
+
+======================================================
+connecting with database
+create a mysql model
+python manage.py makemigrations
+
+
+transfer the model to mysql
+
+python manage.py migrate
