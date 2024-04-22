@@ -50,3 +50,25 @@ var func = (array) => {
 var content = ["IBM_cloud","arc_array","make_data"];
 var final_array = func(content);
 console.log(final_array);
+
+
+
+// console.log("Hello_world".split("_"));
+
+
+// var func = (array) => {
+// 	return array.map((value) => {
+// 		return value.split("_").map((variable) => {
+// 			return variable[0].toUpperCase() + variable.slice(1);
+// 		}).join(" ");
+// 	});
+// };
+// var content = ["IBM_cloud","arc_array","make_data"];
+// var final_array = func(content);
+// console.log(final_array);
+
+// var final_array = next_array.map((variable) => {
+// 	return variable[0][0].toUpperCase() + variable[0].slice(1) + " " + variable[1][0].toUpperCase() + variable[1].slice(1);
+// });
+
+// console.log(final_array);
