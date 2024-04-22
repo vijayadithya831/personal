@@ -40,13 +40,13 @@
 
 // problem 3
 
-// function QuestionNoTwo() {
-//     var content = ["IBM_cloud,Arc_array,Make_data"];
-//     return content.map((value) => {
-//         return value.split("_").map((value) => {
-//             return value[0].toUpperCase() + value.slice(1);
-//         }).join(' ');
-//     });
-// }
-
-// console.log(QuestionNoTwo());
+var func = (array) => {
+	return array.map((value) => {
+		return value.split("_").map((variable) => {
+			return variable[0].toUpperCase() + variable.slice(1);
+		}).join(" ");
+	});
+};
+var content = ["IBM_cloud","arc_array","make_data"];
+var final_array = func(content);
+console.log(final_array);
