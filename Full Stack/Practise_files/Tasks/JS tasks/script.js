@@ -36,20 +36,20 @@
 //     console.log(val);
 // }
 
-// func(100,9);
+// func(100,4);
 
 // problem 3
 
-var func = (array) => {
-	return array.map((value) => {
-		return value.split("_").map((variable) => {
-			return variable[0].toUpperCase() + variable.slice(1);
-		}).join(" ");
-	});
-};
-var content = ["IBM_cloud","arc_array","make_data"];
-var final_array = func(content);
-console.log(final_array);
+// var func = (array) => {
+// 	return array.map((value) => {
+// 		return value.split("_").map((variable) => {
+// 			return variable[0].toUpperCase() + variable.slice(1);
+// 		}).join(" ");
+// 	});
+// };
+// var content = ["IBM_cloud","arc_array","make_data"];
+// var final_array = func(content);
+// console.log(final_array);
 
 
 
