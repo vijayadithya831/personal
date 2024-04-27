@@ -3,7 +3,7 @@ from tkinter import *
 window = Tk()
 
 window.title("Simple Calculator")
-window.iconbitmap("D:/Personal/Full Stack/Python/GUI/calculator.ico")
+# window.iconbitmap("D:/Personal/Full Stack/Python/GUI/calculator.ico")
 
 entry = Entry(width=50, borderwidth=5, font=("Times New Roman", 12), justify=CENTER)
 entry.grid(row=0, column=0, columnspan=4)
