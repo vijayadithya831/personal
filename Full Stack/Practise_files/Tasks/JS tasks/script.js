@@ -72,3 +72,13 @@
 // });
 
 // console.log(final_array);
+
+
+// let marks = [100, 50, 90, 80, 70];
+
+// let print = element => console.log(element);
+
+// marks.sort((a,b) => a-b);
+// marks.forEach(print);
+
+
