@@ -82,3 +82,35 @@
 // marks.forEach(print);
 
 
+let rd = document.createElement('div') ;
+rd.id = 'result' ;
+document.getElementById('wrapper').appendChild(rd);
+
+function calculate() {
+
+    const input = document.getElementById('input').value.trim();
+    const[op1,op,op2] = input.split(/\s*([+-*/])\s*/);
+    let result=0 ;
+
+    switch(op) {
+        case '+':
+            result = Number(op1) + Number(op2) ;
+            break ;
+
+        case '-':
+            result = Number(op1) - Number(op2) ;
+            break ;
+
+        case '*':
+            result = Number(op1) * Number(op2) ;
+            break ;
+
+        case '/':
+            result = Number(op1) / Number(op2) ;
+            break ;
+    }
+
+    document.getElementById('result').innerHTML = result ;
+
+
+}
