@@ -3,3 +3,5 @@
 
 rest parameters/arguments => represent an indefinite number of parameters(it will pack arguements in to an array)
 
+callbacks => a function call made inside a parameter of another function
+             a function passed as an arguement to another function
