@@ -7,4 +7,5 @@ let e = 5;
 function sum(x,y) {
     return x + y;
 }
+
 console.log(sum(a,b));
