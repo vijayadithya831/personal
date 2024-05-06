@@ -22,13 +22,15 @@
 //     console.log(output);
 // }
 
-function sum(x,y,callback) {
-    let result = x+y;
-    callback(result);
-}
+// function sum(x,y,callback) {
+//     let result = x+y;
+//     callback(result);
+// }
 
-function displayConsole(output) {
-    console.log(output);
-}
+// function displayConsole(output) {
+//     console.log(output);
+// }
 
-sum(1,2,displayConsole)
+// sum(1,2,displayConsole)
+
+
