@@ -34,10 +34,27 @@
 // sum(1,2,displayConsole)
 
 
-let numbers = [1,2,3,4,5];
+// let numbers = [1,2,3,4,5,6,7];
 
-let squares = numbers.map((element) => {
-    return Math.pow(element, 2)
-});
-console.log(numbers);
-console.log(squares);
+// let squares = numbers.map((element) => {
+//     return Math.pow(element, 3)
+// });
+// console.log(numbers);
+
+// squares.forEach((element) => {
+//     console.log(element);
+// });
+
+function cube(element) {
+    return Math.pow(element,3);
+}
+
+function print(element) {
+    console.log(element);
+}
+
+let numbers = [1,2,3,4,5,6,7];
+
+let squares = numbers.map(cube)
+
+squares.forEach(print);
