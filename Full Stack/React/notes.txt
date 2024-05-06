@@ -32,10 +32,16 @@ WHY REACT JS??
 
 * SEO friendly (Search Engine Optimization)
 * Coding is simpler because of JSX (JavaScript XML language => HTML can be typed in js file)
-* 
 
+Features of ReactJS
 
+* Virtual DOM
+* Unidirectional Data Flow
 
+React Core Concepts
 
-
+* JSX
+* Components (v.v.v.v.v.v.v.v.v important)
+* Virtual DOM
+* Unidirectional Data Flow
 
