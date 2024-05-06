@@ -45,16 +45,41 @@
 //     console.log(element);
 // });
 
-function cube(element) {
-    return Math.pow(element,3);
-}
+// function cube(element) {
+//     return Math.pow(element,3);
+// }
 
-function print(element) {
-    console.log(element);
-}
+// function print(element) {
+//     console.log(element);
+// }
 
-let numbers = [1,2,3,4,5,6,7];
+// let numbers = [1,2,3,4,5,6,7];
 
-let squares = numbers.map(cube)
+// let cubes = numbers.map(cube)
 
-squares.forEach(print);
+// cubes.forEach(print);
+
+
+const onlineStore = new Map([
+    ["Redmi Pro", 5000],
+    ["HP Laptop", 7000],
+    ["Backpack", 1000],
+    ["Formal Shoes", 1500],
+    ["Purse", 500]
+]);
+
+let shoppingCart = 0;
+
+shoppingCart += onlineStore.get("HP Laptop");
+shoppingCart += onlineStore.get("Backpack");
+onlineStore.set("Water Bottle", 300);
+onlineStore.delete("Water Bottle");
+let ans = onlineStore.has("Water Bottle")
+
+console.log(shoppingCart)
+
+onlineStore.forEach((key, value) => {
+    console.log(`${key} , ${value}`);
+})
+
+console.log(ans);

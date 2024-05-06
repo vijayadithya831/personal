@@ -15,3 +15,27 @@ map (array.map) => executes a provided callback function once for each array ele
 
 Maps => it is an inbuilt object that hold key-value pairs of any datatype.
         keys should be unique, but values can have duplicates
+
+        syntax : const store = new Map();
+===========================================================================================================================================
+REACT 🔥
+
+A Facebook and Instagram Collaboration 
+initial release from 2013
+
+
+React is not a framework, it is a library, used to create user interface
+
+insta, fb, ebay, skype, bitbucket, etc is made up of React
+
+WHY REACT JS??
+
+* SEO friendly (Search Engine Optimization)
+* Coding is simpler because of JSX (JavaScript XML language => HTML can be typed in js file)
+* 
+
+
+
+
+
+
