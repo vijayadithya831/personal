@@ -34,3 +34,10 @@
 // sum(1,2,displayConsole)
 
 
+let numbers = [1,2,3,4,5];
+
+let squares = numbers.map((element) => {
+    return Math.pow(element, 2)
+});
+console.log(numbers);
+console.log(squares);

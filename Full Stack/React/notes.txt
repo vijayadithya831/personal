@@ -9,3 +9,6 @@ callbacks => a function call made inside a parameter of another function
              pros : it ensures that the function is not gonna execute before a task is completed
                     helps us to develop asynchronous code (when one function has to wait for another function)
                     helps us to avoid errors and some complex/potential problems
+
+
+map (array.map) => executes a provided callback function once for each array element and creates a new array
