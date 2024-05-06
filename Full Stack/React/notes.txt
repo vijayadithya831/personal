@@ -45,3 +45,5 @@ React Core Concepts
 * Virtual DOM
 * Unidirectional Data Flow
 
+React Components => Self-contained reusable building blocks of web application
+
