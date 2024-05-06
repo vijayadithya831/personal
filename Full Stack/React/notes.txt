@@ -5,3 +5,7 @@ rest parameters/arguments => represent an indefinite number of parameters(it wil
 
 callbacks => a function call made inside a parameter of another function
              a function passed as an arguement to another function
+
+             pros : it ensures that the function is not gonna execute before a task is completed
+                    helps us to develop asynchronous code (when one function has to wait for another function)
+                    helps us to avoid errors and some complex/potential problems
