@@ -14,3 +14,4 @@ callbacks => a function call made inside a parameter of another function
 map (array.map) => executes a provided callback function once for each array element and creates a new array
 
 Maps => it is an inbuilt object that hold key-value pairs of any datatype.
+        keys should be unique, but values can have duplicates
