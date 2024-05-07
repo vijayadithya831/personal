@@ -69,3 +69,7 @@ Commands to create react application
 change directory => cd (my-app)
 
 run react app => npm start
+
+===========================================================================================================================================
+
+Components => In React, component represents a part of user interfaces. 
