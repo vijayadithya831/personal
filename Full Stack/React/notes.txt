@@ -56,6 +56,16 @@ Components => components is completely reusable code => which means for example,
 
 React is completely declarative (imperative => antonym) => Tell react what we want and reacg will build the actual UI => This is implicit way
 
+===========================================================================================================================================
+
 to download react (prerequsites) => 1. node js
                                     2. browser
                                     3. vscode
+
+Commands to create react application
+
+1. npx create-react-app (my-app)
+
+change directory => cd (my-app)
+
+run react app => npm start
