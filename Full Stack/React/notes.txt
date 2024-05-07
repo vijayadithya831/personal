@@ -49,7 +49,8 @@ React Components => Self-contained reusable building blocks of web application
 
 React is a component based architecture => this will break down our application into small encapsulated parts which can be composed to make more complex UIs.
 
-header, side navbar, content of the page, footer => individual components of a page
+header, side navbar, content of the page, footer => individual components of a page => aka inner components or nested componenets
+
 root component => this components holds all other inner components
 
 Components => components is completely reusable code => which means for example, if we develop an article component in react, we can use that in angular, vue, etc.
@@ -72,4 +73,5 @@ run react app => npm start
 
 ===========================================================================================================================================
 
-Components => In React, component represents a part of user interfaces. 
+Components => In React, component represents a part of user interfaces.
+              
