@@ -74,4 +74,12 @@ run react app => npm start
 ===========================================================================================================================================
 
 Components => In React, component represents a part of user interfaces.
-              
+
+
+components are categorised into two types =>1. Stateless Functional Components
+                                            2. Stateful Class Components
+
+                1. => JavaScript function
+                eg. function Greetings(props) {
+                    return <h1> Hello, {props.name} </h1>;
+                }
