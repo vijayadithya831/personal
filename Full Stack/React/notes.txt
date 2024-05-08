@@ -73,7 +73,9 @@ run react app => npm start
 
 ===========================================================================================================================================
 
-Components => In React, component represents a part of user interfaces.
+Components => In React, component represents a part of user interfaces. They are reusable
+              Components can be nested inside other components.
+              Components are the building blocks of any react application.
 
 
 components are categorised into two types =>1. Stateless Functional Components
@@ -90,3 +92,7 @@ components are categorised into two types =>1. Stateless Functional Components
                         return <h1>Hello, {this.props.name}</h1>
                     }
                 }
+
+Function component:
+    Properties is otherwise known as parameters/arguements, which we pass into function component
+    
