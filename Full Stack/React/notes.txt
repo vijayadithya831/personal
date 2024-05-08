@@ -92,7 +92,7 @@ components are categorised into two types =>1. Stateless Functional Components
                         return <h1>Hello, {this.props.name}</h1>
                     }
                 }
+        Return => returns a value back to the place where we invoked the function.
 
 Function component:
     Properties is otherwise known as parameters/arguements, which we pass into function component
-    
