@@ -96,3 +96,4 @@ components are categorised into two types =>1. Stateless Functional Components
 
 Function component:
     Properties is otherwise known as parameters/arguements, which we pass into function component
+    
