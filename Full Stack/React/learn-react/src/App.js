@@ -1,11 +1,16 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
+import WelcomeStudents from './Components/WelcomeClassCompPractice';
+
 function App() {
+  // return <h1>Welcome</h1>;
   return (
-    <div>
-      <h1>Hello world</h1>
-      <p>This is a sample text to show that react app works just fine</p>
+    <div className='App'>
+      <WelcomeStudents/>
+      <WelcomeStudents/>
+      <WelcomeStudents/>
+      <WelcomeStudents/>
     </div>
   );
 }

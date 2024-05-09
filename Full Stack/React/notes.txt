@@ -97,3 +97,30 @@ components are categorised into two types =>1. Stateless Functional Components
 Function component:
     Properties is otherwise known as parameters/arguements, which we pass into function component
     
+===========================================================================================================================================
+
+To install npm create-react-app globally (Run in cmd) => npm install create-react-app -g
+
+to install npm globally => npm install -g npm@latest
+
+===========================================================================================================================================
+
+Class Component:
+    It is a normal js class
+
+
+Functional Vs Class:
+    Functional: It is a simple function which receives the props and returns the declaration or jsx.
+                we need to try and use functional components as much as possible
+                absence of 'this' keyword (advantage)
+                Here we will find the solution without using the state => thats why it is called stateless component/dumb compnonent/presentational component.
+    Class:      it has a bit more features than function components.
+                they can maintain their own private date, aka states.
+                They can contain more complicated UI logics
+                They provide life-cycle hooks (most important point)
+                they are also known as stateful components/smart components/container components
+
+JSX: JavaScript XML => it is an extension to the JavaScript language syntax i.e., we will be able to write HTML like code for
+                       elements and components
+
+Props: Properties, it is the optional input that our component can accept and it also allows the component dynamic.
