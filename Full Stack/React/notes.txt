@@ -126,3 +126,4 @@ Props: Properties, it is the optional input that our component can accept and it
        Props are read-only data that are shared between components => parent componenet can send data to child component.
 
 syntax for props => <Component key=value/>
+
