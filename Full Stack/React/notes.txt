@@ -120,7 +120,7 @@ Functional Vs Class:
                 They provide life-cycle hooks (most important point)
                 they are also known as stateful components/smart components/container components
 
-JSX: JavaScript XML => it is an extension to the JavaScript language syntax i.e., we will be able to write HTML like code for
-                       elements and components
+JSX: JavaScript XML => it is an extension to the JavaScript language syntax i.e., we will be able to write HTML like code for elements and components
 
 Props: Properties, it is the optional input that our component can accept and it also allows the component dynamic.
+
