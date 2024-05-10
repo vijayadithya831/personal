@@ -6,10 +6,14 @@ import WelcomeStudents from './Components/WelcomeClassCompPractice';
 function App() {
   return (
     <div className='App'>
-      <Greetings/>
+      {/* <Greetings/>
       <WelcomeStudents/>
-      <h1>These two messages are rendered from function and class component respectively!</h1>
+      <h1>These two messages are rendered from function and class component respectively!</h1> */}
+      <Greetings name = "Ganesh"/>
+      <Greetings name = "Aslam"/>
+      <Greetings name = "John"/>
     </div>
+
   );
 }
 

@@ -123,4 +123,6 @@ Functional Vs Class:
 JSX: JavaScript XML => it is an extension to the JavaScript language syntax i.e., we will be able to write HTML like code for elements and components
 
 Props: Properties, it is the optional input that our component can accept and it also allows the component dynamic.
+       Props are read-only data that are shared between components => parent componenet can send data to child component.
 
+syntax for props => <Component key=value/>
