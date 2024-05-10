@@ -9,9 +9,7 @@ function App() {
     <div className='App'>
       <Greetings/>
       <WelcomeStudents/>
-      <WelcomeStudents/>
-      <WelcomeStudents/>
-      <WelcomeStudents/>
+      <h1>These two messages are rendered from function and class component respectively!</h1>
     </div>
   );
 }
