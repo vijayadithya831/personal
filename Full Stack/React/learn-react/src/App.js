@@ -15,11 +15,22 @@ function App() {
       <WelcomeStudents name = "Ganesh" sportsName = "Cricket"/>
       <WelcomeStudents name = "Aslam" sportsName = "Football"/>
       <WelcomeStudents name = "John" sportsName = "Hockey"/> */}
-      <Welcome name = "Ganesh" sportsName = "Cricket">
+      {/* <Welcome name = "Ganesh" sportsName = "Cricket">
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus dicta optio omnis voluptatum consectetur cumque molestias aliquid quae sit similique sunt voluptatem, magnam ex ipsa sed consequuntur. Fugiat distinctio eveniet beatae libero minima veritatis doloribus dolore, ipsam exercitationem hic, quod tenetur natus, odio porro dicta pariatur? Reiciendis quo laborum eum.</p>
       </Welcome>
-      <Welcome name = "Aslam" sportsName = "Football"></Welcome>
-      <Welcome name = "John" sportsName = "Hockey"></Welcome>
+      <Welcome name = "Aslam" sportsName = "Football">
+        <button>Click Me</button>
+      </Welcome>
+      <Welcome name = "John" sportsName = "Hockey">
+        <h5>There's nothing here, but there's something!</h5>
+      </Welcome> */}
+      <Welcome name = "Vijay" sportsName = "Cricket"/>
+      <WelcomeStudents name = "Ganesh" sportsName = "Cricket">
+        <button>Click Me</button>
+      </WelcomeStudents>
+      <WelcomeStudents name = "Aslam" sportsName = "Football"></WelcomeStudents>
+      <WelcomeStudents name = "John" sportsName = "Hockey"></WelcomeStudents>
+      
     </div>
 
   );
