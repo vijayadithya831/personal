@@ -23,4 +23,3 @@ class Information extends React.Component {
 }
 
 export default Information;
-
