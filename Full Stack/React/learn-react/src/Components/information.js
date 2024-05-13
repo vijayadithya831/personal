@@ -1,7 +1,7 @@
 import React from "react";
 
 class Information extends React.Component {
-    constructor() {
+    constructor(props) {
         super()
         this.state = {
             information:'Welcome To React Class'

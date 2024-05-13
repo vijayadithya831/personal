@@ -3,6 +3,7 @@ import './App.css';
 import {Welcome, Button, Form} from './Components/WelcomeFuncCompPractice'
 import WelcomeStudents from './Components/WelcomeClassCompPractice';
 import Information from './Components/information';
+import {CounterClassState, ChangeText} from './Components/CounerClassState';
 
 function App() {
   return (
@@ -34,7 +35,9 @@ function App() {
         <br></br>
         <Form/>
         <br></br> */}
-        <Information/>
+        {/* <Information/> */}
+        <CounterClassState/>
+        <ChangeText/>
         
     </div>
 
