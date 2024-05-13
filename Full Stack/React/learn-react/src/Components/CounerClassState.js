@@ -8,19 +8,11 @@ class CounterClassState extends Component {
             count:0
         };
     }
-    // IncreaseTheValue() {
-    //     this.setState({count: this.state.count+1});
-    // }
-    // DecreaseTheValue() {
-    //     this.setState({count: this.state.count-1});
-    // }
 
     render() {
         return(
             <div>
                 <div><h1>Count = {this.state.count}</h1></div>
-                {/* <button onClick={() => this.IncreaseTheValue()}>Increase</button>
-                <button onClick={() => this.DecreaseTheValue()}>Decrease</button> */}
                 <button onClick={() => this.setState({count: this.state.count+1})}>Increase</button>
                 <button onClick={() => this.setState({count: this.state.count-1})}>Decrease</button>
             </div>
