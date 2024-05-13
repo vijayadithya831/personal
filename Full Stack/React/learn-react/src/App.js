@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-import Welcome from './Components/WelcomeFuncCompPractice'
+import {Welcome, Button, Form} from './Components/WelcomeFuncCompPractice'
 import WelcomeStudents from './Components/WelcomeClassCompPractice';
 
 function App() {
@@ -24,12 +24,12 @@ function App() {
       <Welcome name = "John" sportsName = "Hockey">
         <h5>There's nothing here, but there's something!</h5>
       </Welcome> */}
-      <Welcome name = "Vijay" sportsName = "Cricket"/>
-      <WelcomeStudents name = "Ganesh" sportsName = "Cricket">
-        <button>Click Me</button>
-      </WelcomeStudents>
-      <WelcomeStudents name = "Aslam" sportsName = "Football"></WelcomeStudents>
-      <WelcomeStudents name = "John" sportsName = "Hockey"></WelcomeStudents>
+      <Welcome name = "Vijay" sportsName = "Cricket" age = "21" gender = "Male"/>
+      <Welcome name = "Venkat" sportsName = "Football" age = "21" gender = "Male"/>
+      <Welcome name = "Udhaya" sportsName = "Volley Ball" age = "22" gender = "Male"/>
+      <Welcome name = "Sundar" sportsName = "Table Tennis" age = "22" gender = "Male"/>
+      <Button/>
+      <Form/>
       
     </div>
 
