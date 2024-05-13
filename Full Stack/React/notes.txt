@@ -124,6 +124,7 @@ JSX: JavaScript XML => it is an extension to the JavaScript language syntax i.e.
 
 Props: Properties, it is the optional input that our component can accept and it also allows the component dynamic.
        Props are read-only data that are shared between components => parent componenet can send data to child component.
+       they are passed as function parameters/arguements
 
 syntax for props => <Component key=value/>
 
@@ -143,3 +144,5 @@ component 3
 
 ======================================================================================================================================
 
+State in ReactJS => States are managed inside or within the component.
+                    Variables are declared inside the function bodya
