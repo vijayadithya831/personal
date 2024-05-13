@@ -1,7 +1,7 @@
-// import logo from './logo.svg';
+import logo from './logo.svg';
 import './App.css';
-// import {Welcome, Button, Form} from './Components/WelcomeFuncCompPractice'
-// import WelcomeStudents from './Components/WelcomeClassCompPractice';
+import {Welcome, Button, Form} from './Components/WelcomeFuncCompPractice'
+import WelcomeStudents from './Components/WelcomeClassCompPractice';
 import Information from './Components/information';
 
 function App() {
@@ -29,8 +29,11 @@ function App() {
         <Welcome name = "Venkat" sportsName = "Football" age = "21" gender = "Male"/>
         <Welcome name = "Udhaya" sportsName = "Volley Ball" age = "22" gender = "Male"/>
         <Welcome name = "Sundar" sportsName = "Table Tennis" age = "22" gender = "Male"/>
+        <br></br>
         <Button/>
-        <Form/> */}
+        <br></br>
+        <Form/>
+        <br></br> */}
         <Information/>
         
     </div>

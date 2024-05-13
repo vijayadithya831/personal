@@ -38,4 +38,4 @@ const Form = (props) => {
     )
 }
 
-export default {Welcome, Button, Form};
+export {Welcome, Button, Form};

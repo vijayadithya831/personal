@@ -146,3 +146,9 @@ component 3
 
 State in ReactJS => States are managed inside or within the component.
                     Variables are declared inside the function bodya
+Task => create 4 buttons, each button should change the state given
+2 headings, 2 paragraphs should be given
+button 1 => change 1 heading
+button 2 => change 1 paragraphs
+button 3 => change 2 headings
+button 4 => change 2 paragraphs
