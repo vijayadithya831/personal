@@ -36,8 +36,8 @@ function App() {
         <Form/>
         <br></br> */}
         {/* <Information/> */}
-        <CounterClassState/>
-        <ChangeText/>
+        {/* <CounterClassState/> */}
+        {/* <ChangeText/> */}
         
     </div>
 

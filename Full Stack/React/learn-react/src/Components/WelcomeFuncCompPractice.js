@@ -25,12 +25,12 @@ const Form = (props) => {
     return(
         <div>
             <form>
-                <label>Username</label>
+                <label>Username:</label>&nbsp;&nbsp;&nbsp;
                 <input type="text" placeholder="Enter your username" required></input>
-                <br></br>
-                <label>Password</label>
+                <br></br><br></br>
+                <label>Password:</label>&nbsp;&nbsp;&nbsp;
                 <input type="password" placeholder="Enter your password" required></input>
-                <br></br>
+                <br></br><br></br>
                 <input type="submit"></input>
                 <br></br>
             </form>
