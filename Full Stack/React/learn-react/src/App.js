@@ -4,7 +4,7 @@ import {Welcome1, Welcome2, Buttons, Forms} from './Components/WelcomeFuncCompPr
 import WelcomeStudents from './Components/WelcomeClassCompPractice';
 import Information from './Components/information';
 import {CounterClassState, ChangeText} from './Components/CounerClassState';
-import StudentWelcomeConditionalIfElse from './Components/StudentWelcomeConditionalIfElse';
+import { StudentWelcomeConditionalIfElse1, StudentWelcomeConditionalIfElse2 } from './Components/StudentWelcomeConditionalIfElse';
 
 function App() {
   return (
@@ -42,7 +42,8 @@ function App() {
         {/* <Information/> */}
         {/* <CounterClassState/> */}
         {/* <ChangeText/> */}
-        <StudentWelcomeConditionalIfElse name="Vijay"/>
+        <StudentWelcomeConditionalIfElse1 name="Vijay"/>
+        <StudentWelcomeConditionalIfElse2 name="Vijay"/>
         
         
     </div>
