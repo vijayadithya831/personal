@@ -11,7 +11,7 @@ const Welcome = (props) => {
     );
 }
 
-const Button = (props) => {
+const Buttons = (props) => {
     return(
         <div>
             <button>Button 1</button>
@@ -21,7 +21,7 @@ const Button = (props) => {
     );
 }
 
-const Form = (props) => {
+const Forms = (props) => {
     return(
         <div>
             <form>
@@ -38,4 +38,4 @@ const Form = (props) => {
     )
 }
 
-export {Welcome, Button, Form};
+export {Welcome, Buttons, Forms};

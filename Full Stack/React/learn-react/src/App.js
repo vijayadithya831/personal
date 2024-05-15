@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-import {Welcome, Button, Form} from './Components/WelcomeFuncCompPractice'
+import {Welcome, Buttons, Forms} from './Components/WelcomeFuncCompPractice'
 import WelcomeStudents from './Components/WelcomeClassCompPractice';
 import Information from './Components/information';
 import {CounterClassState, ChangeText} from './Components/CounerClassState';
