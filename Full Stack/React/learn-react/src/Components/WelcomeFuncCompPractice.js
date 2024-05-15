@@ -1,12 +1,29 @@
 import React from "react";
 
-const Welcome = (props) => {
+const Welcome1 = ({name, sportsName}) => {
     // console.log(props);
     return(
         <div>
-            <h1>This is an introduction of {props.name}</h1>
-            <h2>Here it goes!</h2>
-            <p>Hello, I am {props.name}, I play {props.sportsName}, I am {props.age} years old and I am {props.gender}</p>
+            {/* <h1>This is an introduction of {name}</h1>
+            <h2>Here it goes!</h2> */}
+            <p>Hello, I am {name}, I play {sportsName}
+            {/* , I am {props.age} years old and I am {props.gender} */}
+            </p>
+        </div>
+    );
+}
+
+const Welcome2 = (props) => {
+    // console.log(props);
+
+    const {name, sportsName} = props;
+    return(
+        <div>
+            {/* <h1>This is an introduction of {name}</h1>
+            <h2>Here it goes!</h2> */}
+            <p>Hello, I am {name}, I play {sportsName}
+            {/* , I am {props.age} years old and I am {props.gender} */}
+            </p>
         </div>
     );
 }
@@ -38,4 +55,4 @@ const Forms = (props) => {
     )
 }
 
-export {Welcome, Buttons, Forms};
+export {Welcome1, Welcome2, Buttons, Forms};

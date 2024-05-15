@@ -144,11 +144,28 @@ component 3
 
 ======================================================================================================================================
 
-State in ReactJS => States are managed inside or within the component.
-                    Variables are declared inside the function bodya
 Task => create 4 buttons, each button should change the state given
 2 headings, 2 paragraphs should be given
 button 1 => change 1 heading
 button 2 => change 1 paragraphs
 button 3 => change 2 headings
 button 4 => change 2 paragraphs
+
+======================================================================================================================================
+
+State in ReactJS => States are managed inside or within the component.
+                    Variables are declared inside the function body.
+
+Destructuring props and states => *it is an ES6 feature, that enables us to unpack values from the array or properties from objects into distinct variables
+                                  * It is used in react to improve code readability.
+                                  * Destructuring can be achieved in 2 ways in function componenet.
+                                        1. we can destructure in the function parameters itself.
+                                        2. we can destructure in the function body.
+
+            1. => Instead of props, we are gonna have curly braces in the function parameter. => {}
+            2. => create a constant destructure and assign the value of props to it. => const {} = props;
+
+
+Conditional Rendering : The content of the document is rendered based on a condition.
+        1. if/else rendering
+        2. 

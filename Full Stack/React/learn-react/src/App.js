@@ -1,9 +1,10 @@
 // import logo from './logo.svg';
 import './App.css';
-import {Welcome, Buttons, Forms} from './Components/WelcomeFuncCompPractice'
+import {Welcome1, Welcome2, Buttons, Forms} from './Components/WelcomeFuncCompPractice'
 import WelcomeStudents from './Components/WelcomeClassCompPractice';
 import Information from './Components/information';
 import {CounterClassState, ChangeText} from './Components/CounerClassState';
+import StudentWelcomeConditionalIfElse from './Components/StudentWelcomeConditionalIfElse';
 
 function App() {
   return (
@@ -11,13 +12,16 @@ function App() {
         {/* <Welcome name = "Vijay" sportsName = "Cricket" age = "21" gender = "Male"/>
         <WelcomeStudents name = "Vijay" sportsName = "Cricket"/>
         <h1>These two messages are rendered from function and class component respectively!</h1> */}
-        {/* <Welcome name = "Ganesh" sportsName = "Cricket"/>
-        <Welcome name = "Aslam" sportsName = "Football"/>
-        <Welcome name = "John" sportsName = "Hockey"/>
-        <WelcomeStudents name = "Ganesh" sportsName = "Cricket"/>
+        {/* <Welcome1 name = "Ganesh" sportsName = "Cricket"/>
+        <Welcome1 name = "Aslam" sportsName = "Football"/>
+        <Welcome1 name = "John" sportsName = "Hockey"/>
+        <Welcome2 name = "Ganesh" sportsName = "Cricket"/>
+        <Welcome2 name = "Aslam" sportsName = "Football"/>
+        <Welcome2 name = "John" sportsName = "Hockey"/> */}
+        {/* <WelcomeStudents name = "Ganesh" sportsName = "Cricket"/>
         <WelcomeStudents name = "Aslam" sportsName = "Football"/>
-        <WelcomeStudents name = "John" sportsName = "Hockey"/>
-        <Welcome name = "Ganesh" sportsName = "Cricket">
+        <WelcomeStudents name = "John" sportsName = "Hockey"/> */}
+        {/* <Welcome name = "Ganesh" sportsName = "Cricket">
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus dicta optio omnis voluptatum consectetur cumque molestias aliquid quae sit similique sunt voluptatem, magnam ex ipsa sed consequuntur. Fugiat distinctio eveniet beatae libero minima veritatis doloribus dolore, ipsam exercitationem hic, quod tenetur natus, odio porro dicta pariatur? Reiciendis quo laborum eum.</p>
         </Welcome> */}
         {/* <Welcome name = "Aslam" sportsName = "Football">
@@ -38,6 +42,8 @@ function App() {
         {/* <Information/> */}
         {/* <CounterClassState/> */}
         {/* <ChangeText/> */}
+        <StudentWelcomeConditionalIfElse name="Vijay"/>
+        
         
     </div>
 

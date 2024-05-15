@@ -14,7 +14,8 @@ class CounterClassState extends Component {
             <div>
                 <div><h1>Count = {this.state.count}</h1></div>
                 <button onClick={() => this.setState({count: this.state.count+1})}>Increase</button>&nbsp;&nbsp;&nbsp;&nbsp;
-                <button onClick={() => this.setState({count: this.state.count-1})}>Decrease</button>
+                <button onClick={() => this.setState({count: this.state.count-1})}>Decrease</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                <button onClick={() => this.setState({count: 0})}>Reset</button>
             </div>
         );
     }
