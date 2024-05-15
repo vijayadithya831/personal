@@ -13,7 +13,7 @@ what to do after we include something new into our app
 
 go to settings.py, import os
 
-inside templates , inside 'DIRS', [os.path.join('BASE_DIR', "templates"0]
+inside templates , inside 'DIRS', [os.path.join('BASE_DIR', "templates")]
 
 ======================================================
 connecting with database
