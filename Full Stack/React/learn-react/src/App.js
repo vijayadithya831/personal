@@ -6,6 +6,7 @@ import Information from './Components/information';
 import {CounterClassState, ChangeText} from './Components/CounterClassState';
 import { StudentWelcomeConditionalIfElse, StudentWelcomeConditionalTernary } from './Components/StudentWelcomeConditionalIfElse';
 import StylePracticeInReact from './Components/StylePracticeInReact';
+import {ProductsList1, ProductsList2} from './Components/ProductsList'
 
 
 function App() {
@@ -46,7 +47,9 @@ function App() {
         {/* <ChangeText/> */}
         {/* <StudentWelcomeConditionalIfElse name="Vijay"/>
         <StudentWelcomeConditionalTernary name="Vijay"/> */}
-        <StylePracticeInReact/>
+        {/* <StylePracticeInReact/> */}
+        <ProductsList1/>
+        <ProductsList2/>
         
     </div>
 

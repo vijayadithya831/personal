@@ -38,7 +38,6 @@ class StudentWelcomeConditionalTernary extends React.Component {
         this.state = {
             studentLoggedIn: true
         };
-        var info = null;
     }
     render() {
         return(
