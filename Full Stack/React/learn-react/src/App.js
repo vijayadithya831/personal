@@ -5,6 +5,8 @@ import WelcomeStudents from './Components/WelcomeClassCompPractice';
 import Information from './Components/information';
 import {CounterClassState, ChangeText} from './Components/CounterClassState';
 import { StudentWelcomeConditionalIfElse, StudentWelcomeConditionalTernary } from './Components/StudentWelcomeConditionalIfElse';
+import StylePracticeInReact from './Components/StylePracticeInReact';
+
 
 function App() {
   return (
@@ -44,7 +46,7 @@ function App() {
         {/* <ChangeText/> */}
         {/* <StudentWelcomeConditionalIfElse name="Vijay"/>
         <StudentWelcomeConditionalTernary name="Vijay"/> */}
-        
+        <StylePracticeInReact/>
         
     </div>
 

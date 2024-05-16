@@ -169,3 +169,9 @@ Destructuring props and states => *it is an ES6 feature, that enables us to unpa
 Conditional Rendering : The content of the document is rendered based on a condition.
         1. if/else rendering
         2. Ternary rendering
+
+Styling in CSS using React 🔥: 
+        1. CSS in JS Libraries
+        2. CSS Stylesheets
+        3. Inline CSS
+        
