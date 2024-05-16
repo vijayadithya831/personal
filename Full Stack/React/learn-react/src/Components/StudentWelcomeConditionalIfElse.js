@@ -1,6 +1,6 @@
 import React from "react";
 
-class StudentWelcomeConditionalIfElse1 extends React.Component {
+class StudentWelcomeConditionalIfElse extends React.Component {
 
     constructor(props) {
         super(props)
@@ -31,7 +31,7 @@ class StudentWelcomeConditionalIfElse1 extends React.Component {
     }
 }
 
-class StudentWelcomeConditionalIfElse2 extends React.Component {
+class StudentWelcomeConditionalTernary extends React.Component {
 
     constructor(props) {
         super(props)
@@ -47,4 +47,4 @@ class StudentWelcomeConditionalIfElse2 extends React.Component {
     }
 }
 
-export { StudentWelcomeConditionalIfElse1, StudentWelcomeConditionalIfElse2 };
+export { StudentWelcomeConditionalIfElse, StudentWelcomeConditionalTernary };

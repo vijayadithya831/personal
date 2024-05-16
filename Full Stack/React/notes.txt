@@ -168,4 +168,4 @@ Destructuring props and states => *it is an ES6 feature, that enables us to unpa
 
 Conditional Rendering : The content of the document is rendered based on a condition.
         1. if/else rendering
-        2. 
+        2. Ternary rendering

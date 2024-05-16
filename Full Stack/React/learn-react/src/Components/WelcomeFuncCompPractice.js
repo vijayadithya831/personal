@@ -31,8 +31,8 @@ const Welcome2 = (props) => {
 const Buttons = (props) => {
     return(
         <div>
-            <button>Button 1</button>
-            <button>Button 2</button>
+            <button>Button 1</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button>Button 2</button>&nbsp;&nbsp;&nbsp;&nbsp;
             <button>Button 3</button>
         </div>
     );
