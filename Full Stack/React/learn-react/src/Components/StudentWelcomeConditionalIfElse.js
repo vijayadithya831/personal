@@ -7,7 +7,7 @@ class StudentWelcomeConditionalIfElse extends React.Component {
         this.state = {
             studentLoggedIn: false
         };
-        var info = null;
+        // var info = null;
     }
     render() {
         if(this.state.studentLoggedIn) {

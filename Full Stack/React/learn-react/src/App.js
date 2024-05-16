@@ -1,12 +1,12 @@
 // import logo from './logo.svg';
 import './App.css';
-import {Welcome1, Welcome2, Buttons, Forms} from './Components/WelcomeFuncCompPractice'
-import WelcomeStudents from './Components/WelcomeClassCompPractice';
-import Information from './Components/information';
-import {CounterClassState, ChangeText} from './Components/CounterClassState';
-import { StudentWelcomeConditionalIfElse, StudentWelcomeConditionalTernary } from './Components/StudentWelcomeConditionalIfElse';
-import StylePracticeInReact from './Components/StylePracticeInReact';
-import {ProductsList1, ProductsList2} from './Components/ProductsList'
+// import {Welcome1, Welcome2, Buttons, Forms} from './Components/WelcomeFuncCompPractice'
+// import WelcomeStudents from './Components/WelcomeClassCompPractice';
+// import Information from './Components/information';
+// import {CounterClassState, ChangeText} from './Components/CounterClassState';
+// import { StudentWelcomeConditionalIfElse, StudentWelcomeConditionalTernary } from './Components/StudentWelcomeConditionalIfElse';
+// import StylePracticeInReact from './Components/StylePracticeInReact';
+// import {ProductsList1, ProductsList2} from './Components/ProductsList'
 
 
 function App() {
@@ -48,8 +48,8 @@ function App() {
         {/* <StudentWelcomeConditionalIfElse name="Vijay"/>
         <StudentWelcomeConditionalTernary name="Vijay"/> */}
         {/* <StylePracticeInReact/> */}
-        <ProductsList1/>
-        <ProductsList2/>
+        {/* <ProductsList1/>
+        <ProductsList2/> */}
         
     </div>
 
