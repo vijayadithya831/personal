@@ -82,35 +82,83 @@
 // marks.forEach(print);
 
 
-let rd = document.createElement('div') ;
-rd.id = 'result' ;
-document.getElementById('wrapper').appendChild(rd);
+// let rd = document.createElement('div') ;
+// rd.id = 'result' ;
+// document.getElementById('wrapper').appendChild(rd);
 
-function calculate() {
+// function calculate() {
 
-    const input = document.getElementById('input').value.trim();
-    const[op1,op,op2] = input.split(/\s*([+-*/])\s*/);
-    let result=0 ;
+//     const input = document.getElementById('input').value.trim();
+//     const[op1,op,op2] = input.split(/\s*([+-*/])\s*/);
+//     let result=0 ;
 
-    switch(op) {
-        case '+':
-            result = Number(op1) + Number(op2) ;
-            break ;
+//     switch(op) {
+//         case '+':
+//             result = Number(op1) + Number(op2) ;
+//             break ;
 
-        case '-':
-            result = Number(op1) - Number(op2) ;
-            break ;
+//         case '-':
+//             result = Number(op1) - Number(op2) ;
+//             break ;
 
-        case '*':
-            result = Number(op1) * Number(op2) ;
-            break ;
+//         case '*':
+//             result = Number(op1) * Number(op2) ;
+//             break ;
 
-        case '/':
-            result = Number(op1) / Number(op2) ;
-            break ;
+//         case '/':
+//             result = Number(op1) / Number(op2) ;
+//             break ;
+//     }
+
+//     document.getElementById('result').innerHTML = result ;
+
+
+// }
+
+
+const reportsData = [{
+    id: "PR1",
+    pName: "Eios",
+    reviewDetails: {
+        Overall: {
+            Architecture: [{"Reviewed by": "hari1"}, {"Reviewed by": "hari2"}],
+            Security: [{"Reviewed by": "hari1, hari2"}, {"Reviewed by": "hari3"}],
+            Design: [{"Reviewed by": "hari1, hari2"}, {"Reviewed by": "hari3"}],
+        },
     }
+},{
+    id: "PR2",
+    pName: "LMJ",
+    reviewDetails: {
+        Overall: {
+            Security: [{"Reviewed by": "hari1, hari2"}, {"Reviewed by": "hari3"}],
+            Design: [{"Reviewed by": "hari1, hari2"}, {"Reviewed by": "hari3"}],
+        },
+    }
+},{
+    id: "PR3",
+    pName: "LNMJJJJJJ",
+    reviewDetails: {
+        Dashboard: {
+            Security: [{"Reviewed by": "hari1, hari2"}, {"Reviewed by": "hari3"}],
+            Design: [{"Reviewed by": "hari1, hari2"}, {"Reviewed by": "hari3"}],
+        },
+    }
+},{
+    id: "PR3",
+    pName: "LNMJJJJJJ",
+}]
 
-    document.getElementById('result').innerHTML = result ;
-
-
-}
+reportsData.map((project) => { 
+    if(project.reviewDetails){
+        if(project.reviewDetails.Overall){
+            if(project.reviewDetails.Overall.Architecture){
+                const latestArchitecture =  project.reviewDetails.Overall.Architecture
+                console.log(latestArchitecture);
+            }
+        }
+    }
+    else {
+        console.log("Data Not Present")
+    }
+});
