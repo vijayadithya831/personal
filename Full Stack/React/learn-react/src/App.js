@@ -6,8 +6,8 @@ import './App.css';
 // import {CounterClassState, ChangeText} from './Components/CounterClassState';
 // import { StudentWelcomeConditionalIfElse, StudentWelcomeConditionalTernary } from './Components/StudentWelcomeConditionalIfElse';
 // import StylePracticeInReact from './Components/StylePracticeInReact';
-// import {ProductsList1, ProductsList2} from './Components/ProductsList'
-import DisplayBankCustomers from './Components/DisplayBankCustomers';
+// import {ProductsList1, ProductsList2} from './Components/ProductsList';
+// import DisplayBankCustomers from './Components/DisplayBankCustomers';
 
 
 function App() {
@@ -51,7 +51,8 @@ function App() {
         {/* <StylePracticeInReact/> */}
         {/* <ProductsList1/>
         <ProductsList2/> */}
-        <DisplayBankCustomers/>
+        {/* <DisplayBankCustomers/> */}
+        
         
     </div>
 

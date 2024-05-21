@@ -180,8 +180,11 @@ Styling in CSS using React 🔥:
             2. create a css file and import it in your component js file
             3. give classnames for the particular html elements in the component and fetch those in css as usual
 
-======================================================================================================================================
+========================================================================================================================================
 
 Task : Create a list of objects for 4 bank customers.
         customer name, customer account number, customer pan number, customer acc balance.
         using map method, render the details in the UI.
+
+========================================================================================================================================
+

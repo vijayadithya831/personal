@@ -2,7 +2,7 @@ const BankCustomers = [
     {
         name: "Vijay",
         acc_no: 89034751,
-        pan_no: "ESQPA2404C",
+        pan_no: "ALIFD0953X",
         acc_bal: 1000
     },
     {
