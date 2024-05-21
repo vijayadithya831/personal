@@ -194,8 +194,9 @@ Fragments => *fragments will let us group a list of children elements without ad
              *Fragments can accept key attributes while rendering list of data.
 
 
-Pure Components in React JS: 
+Pure Components in React JS: The parent component and normal component will re-render for the set interval time continuously, but pure component do not. The main difference between a normal class component and a pure class component is that it stops the re-rendering process in the background.
 
+The normal component does not implement the 
 
 
 ComponentDidMount() => it is a method used to achieve asynchronous code.

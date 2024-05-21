@@ -11,8 +11,6 @@ import './App.css';
 // import FragmentsPractice from './Components/FragmentsPractice';
 // import TableForFragmentsPractice from './Components/TableForFragmentsPractice';
 import ParentComponent from './Components/ParentComponent';
-import PureComponentsPractice from './Components/PureComponentsPractice';
-import NormalClassComponent from './Components/NormalClassComponent';
 
 
 function App() {
