@@ -9,7 +9,10 @@ import './App.css';
 // import {ProductsList1, ProductsList2} from './Components/ProductsList';
 // import DisplayBankCustomers from './Components/DisplayBankCustomers';
 // import FragmentsPractice from './Components/FragmentsPractice';
-import TableForFragmentsPractice from './Components/TableForFragmentsPractice';
+// import TableForFragmentsPractice from './Components/TableForFragmentsPractice';
+import ParentComponent from './Components/ParentComponent';
+import PureComponentsPractice from './Components/PureComponentsPractice';
+import NormalClassComponent from './Components/NormalClassComponent';
 
 
 function App() {
@@ -55,8 +58,10 @@ function App() {
         <ProductsList2/> */}
         {/* <DisplayBankCustomers/> */}
         {/* <FragmentsPractice/> */}
-        <TableForFragmentsPractice/>
-        
+        {/* <TableForFragmentsPractice/> */}
+        {/* <PureComponentsPractice/>
+        <NormalClassComponent/> */}
+        <ParentComponent/>
     </div>
 
   );

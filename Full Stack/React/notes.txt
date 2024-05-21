@@ -189,6 +189,13 @@ Task : Create a list of objects for 4 bank customers.
 ========================================================================================================================================
 *Advanced react topics*
 
-Fragments => fragments will let us group a list of children elements without adding extra nodes (div tags) to the DOM
-             Which is, the function component contains the return statement, which in turn contains a div tag. while rendering, this div acts as an extra tag, which will create complications while rendering. So, in order to remove the div from the DOM, we use React.Fragment so that multiple parent tags can be given inside the return and the program works just fine.
+Fragments => *fragments will let us group a list of children elements without adding extra nodes (div tags) to the DOM
+              Which is, the function component contains the return statement, which in turn contains a div tag. while rendering, this div acts as an extra tag, which will create complications while rendering. So, in order to remove the div from the DOM, we use <React.Fragment></React.Fragment> (or <></> => this also indicates fragments) so that multiple parent tags can be given inside the return and the program works just fine.
+             *Fragments can accept key attributes while rendering list of data.
 
+
+Pure Components in React JS: 
+
+
+
+ComponentDidMount() => it is a method used to achieve asynchronous code.

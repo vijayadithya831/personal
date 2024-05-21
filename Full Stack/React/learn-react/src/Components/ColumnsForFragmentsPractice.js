@@ -20,4 +20,20 @@ function Row2() {
     );
 }
 
-export {Row1,Row2};
+function Row3() {
+    const products = [1,2,3];
+    return(
+        <React.Fragment>
+            {products.map(product => (
+                <React.Fragment key={product.id}>
+                    <h1>Heading</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores non doloribus voluptatem hic dolorem aliquid ipsum similique, quo eos nobis dolorum eveniet. Repudiandae aut nulla voluptatibus unde omnis modi quae.</p>
+                </React.Fragment>
+            ))}
+        </React.Fragment>
+    );
+}
+
+export {Row1,Row2,Row3};
+
+
