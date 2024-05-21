@@ -8,7 +8,8 @@ import './App.css';
 // import StylePracticeInReact from './Components/StylePracticeInReact';
 // import {ProductsList1, ProductsList2} from './Components/ProductsList';
 // import DisplayBankCustomers from './Components/DisplayBankCustomers';
-import FragmentsPractice from './Components/FragmentsPractice';
+// import FragmentsPractice from './Components/FragmentsPractice';
+import TableForFragmentsPractice from './Components/TableForFragmentsPractice';
 
 
 function App() {
@@ -53,7 +54,8 @@ function App() {
         {/* <ProductsList1/>
         <ProductsList2/> */}
         {/* <DisplayBankCustomers/> */}
-        <FragmentsPractice/>
+        {/* <FragmentsPractice/> */}
+        <TableForFragmentsPractice/>
         
     </div>
 
