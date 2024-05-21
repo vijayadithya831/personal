@@ -187,4 +187,6 @@ Task : Create a list of objects for 4 bank customers.
         using map method, render the details in the UI.
 
 ========================================================================================================================================
+*Advanced react topics*
 
+Fragments => fragments will let us group a list of children elements without adding extra nodes to the DOM 
