@@ -33,7 +33,7 @@ function ProductsList2(props) {
     ];
 
     const productsList = products.map(product => 
-        <h2>Product ID: {product.productId}<br/>
+        <h2 key={product.productId}>Product ID: {product.productId}<br/>
         Product Price: {product.productPrice}<br/>
         Product Name: {product.productName}<br/>
         Product Company: {product.productCompany}</h2>

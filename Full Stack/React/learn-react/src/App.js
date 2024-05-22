@@ -6,7 +6,7 @@ import './App.css';
 // import {CounterClassState, ChangeText} from './Components/CounterClassState';
 // import { StudentWelcomeConditionalIfElse, StudentWelcomeConditionalTernary } from './Components/StudentWelcomeConditionalIfElse';
 // import StylePracticeInReact from './Components/StylePracticeInReact';
-// import {ProductsList1, ProductsList2} from './Components/ProductsList';
+import {ProductsList1, ProductsList2} from './Components/ProductsList';
 // import DisplayBankCustomers from './Components/DisplayBankCustomers';
 // import FragmentsPractice from './Components/FragmentsPractice';
 // import TableForFragmentsPractice from './Components/TableForFragmentsPractice';
@@ -52,15 +52,15 @@ function App() {
         {/* <StudentWelcomeConditionalIfElse name="Vijay"/>
         <StudentWelcomeConditionalTernary name="Vijay"/> */}
         {/* <StylePracticeInReact/> */}
-        {/* <ProductsList1/>
-        <ProductsList2/> */}
+        {/* <ProductsList1/> */}
+        <ProductsList2/>
         {/* <DisplayBankCustomers/> */}
         {/* <FragmentsPractice/> */}
         {/* <TableForFragmentsPractice/> */}
         {/* <PureComponentsPractice/>
         <NormalClassComponent/> */}
         {/* <ParentComponent/> */}
-        
+
 
     </div>
 
