@@ -13,7 +13,7 @@ export class ParentComponent extends React.Component {
     componentDidMount() {
         setInterval(() => {
             this.setState({customer:'Venkat'})
-        },4000)
+        },6000)
     }
   render() {
     console.log('Parent Component Rendering')

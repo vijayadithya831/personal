@@ -10,7 +10,7 @@ import './App.css';
 // import DisplayBankCustomers from './Components/DisplayBankCustomers';
 // import FragmentsPractice from './Components/FragmentsPractice';
 // import TableForFragmentsPractice from './Components/TableForFragmentsPractice';
-import ParentComponent from './Components/ParentComponent';
+// import ParentComponent from './Components/ParentComponent';
 
 
 function App() {
@@ -59,7 +59,9 @@ function App() {
         {/* <TableForFragmentsPractice/> */}
         {/* <PureComponentsPractice/>
         <NormalClassComponent/> */}
-        <ParentComponent/>
+        {/* <ParentComponent/> */}
+        
+
     </div>
 
   );
