@@ -1,5 +1,4 @@
 // import logo from './logo.svg';
-import { PureComponent } from 'react';
 import './App.css';
 // import {Welcome1, Welcome2, Buttons, Forms} from './Components/WelcomeFuncCompPractice'
 // import WelcomeStudents from './Components/WelcomeClassCompPractice';
@@ -12,9 +11,9 @@ import './App.css';
 // import FragmentsPractice from './Components/FragmentsPractice';
 // import TableForFragmentsPractice from './Components/TableForFragmentsPractice';
 // import ParentComponent from './Components/ParentComponent';
-import NormalCompForIncrement from './Components/NormalCompForIncrement';
-import PureCompForIncrement from './Components/PureCompForIncrement';
-
+// import NormalCompForIncrement from './Components/NormalCompForIncrement';
+// import PureCompForIncrement from './Components/PureCompForIncrement';
+import MemoComponent from './Components/MemoComponent';
 
 function App() {
   return (
@@ -61,8 +60,10 @@ function App() {
         {/* <FragmentsPractice/> */}
         {/* <TableForFragmentsPractice/> */}
         {/* <ParentComponent/> */}
-        <NormalCompForIncrement/>
-        <PureCompForIncrement/>
+        {/* <NormalCompForIncrement/>
+        <PureCompForIncrement/> */}
+        <MemoComponent name="Vijay"/>
+
 
 
     </div>

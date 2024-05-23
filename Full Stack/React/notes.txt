@@ -214,3 +214,6 @@ class Counter extends React.PureComponent {
 }
 export default Counter;
 ```
+==================================================================================================================================
+
+Memos in React => Memo is a function based component
