@@ -2,7 +2,7 @@ import React from "react";
 
 function ProductsList1 (props) {
     const products = ['Laptop', 'Redmi 10', 'Backpack', 'Smart Watch'];
-    const productsList = products.map(product => <h2>{product}</h2>)
+    const productsList = products.map((product, index) => <h2 key={index}>{product}</h2>)
     return(
         <div>
             {productsList}

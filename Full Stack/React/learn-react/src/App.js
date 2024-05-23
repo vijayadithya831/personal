@@ -1,4 +1,5 @@
 // import logo from './logo.svg';
+import { PureComponent } from 'react';
 import './App.css';
 // import {Welcome1, Welcome2, Buttons, Forms} from './Components/WelcomeFuncCompPractice'
 // import WelcomeStudents from './Components/WelcomeClassCompPractice';
@@ -6,11 +7,13 @@ import './App.css';
 // import {CounterClassState, ChangeText} from './Components/CounterClassState';
 // import { StudentWelcomeConditionalIfElse, StudentWelcomeConditionalTernary } from './Components/StudentWelcomeConditionalIfElse';
 // import StylePracticeInReact from './Components/StylePracticeInReact';
-import {ProductsList1, ProductsList2} from './Components/ProductsList';
+// import {ProductsList1, ProductsList2} from './Components/ProductsList';
 // import DisplayBankCustomers from './Components/DisplayBankCustomers';
 // import FragmentsPractice from './Components/FragmentsPractice';
 // import TableForFragmentsPractice from './Components/TableForFragmentsPractice';
 // import ParentComponent from './Components/ParentComponent';
+import NormalCompForIncrement from './Components/NormalCompForIncrement';
+import PureCompForIncrement from './Components/PureCompForIncrement';
 
 
 function App() {
@@ -52,14 +55,14 @@ function App() {
         {/* <StudentWelcomeConditionalIfElse name="Vijay"/>
         <StudentWelcomeConditionalTernary name="Vijay"/> */}
         {/* <StylePracticeInReact/> */}
-        {/* <ProductsList1/> */}
-        <ProductsList2/>
+        {/* <ProductsList1/>
+        <ProductsList2/> */}
         {/* <DisplayBankCustomers/> */}
         {/* <FragmentsPractice/> */}
         {/* <TableForFragmentsPractice/> */}
-        {/* <PureComponentsPractice/>
-        <NormalClassComponent/> */}
         {/* <ParentComponent/> */}
+        <NormalCompForIncrement/>
+        <PureCompForIncrement/>
 
 
     </div>

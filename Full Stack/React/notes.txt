@@ -180,13 +180,13 @@ Styling in CSS using React 🔥:
             2. create a css file and import it in your component js file
             3. give classnames for the particular html elements in the component and fetch those in css as usual
 
-========================================================================================================================================
+==================================================================================================================================
 
 Task : Create a list of objects for 4 bank customers.
         customer name, customer account number, customer pan number, customer acc balance.
         using map method, render the details in the UI.
 
-========================================================================================================================================
+==================================================================================================================================
 *Advanced react topics*
 
 Fragments => *fragments will let us group a list of children elements without adding extra nodes (div tags) to the DOM
@@ -196,7 +196,21 @@ Fragments => *fragments will let us group a list of children elements without ad
 
 Pure Components in React JS: The parent component and normal component will re-render for the set interval time continuously, but pure component do not. The main difference between a normal class component and a pure class component is that it stops the re-rendering process in the background.
 
-
-
-
+==================================================================================================================================
 ComponentDidMount() => it is a method used to achieve asynchronous code.
+
+React component render method will re-render component event if we pass same props and state which results in decrease in app performance.
+
+React.PureComponent is same subclass like React.Component, but it only renders component when there is difference between current and previous state.
+
+Syntax
+
+```
+import React from 'react';
+class Counter extends React.PureComponent {
+    render() {
+        return <h1> Hello, {this.props.name}</h1>
+    }
+}
+export default Counter;
+```

@@ -12,7 +12,7 @@ export class ParentComponent extends React.Component {
     }
     componentDidMount() {
         setInterval(() => {
-            this.setState({customer:'Venkat'})
+            this.setState({customer:'Vijay'})
         },6000)
     }
   render() {
