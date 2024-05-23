@@ -13,7 +13,7 @@ import './App.css';
 // import ParentComponent from './Components/ParentComponent';
 // import NormalCompForIncrement from './Components/NormalCompForIncrement';
 // import PureCompForIncrement from './Components/PureCompForIncrement';
-import MemoComponent from './Components/MemoComponent';
+import Parent from './Parent';
 
 function App() {
   return (
@@ -62,8 +62,7 @@ function App() {
         {/* <ParentComponent/> */}
         {/* <NormalCompForIncrement/>
         <PureCompForIncrement/> */}
-        <MemoComponent name="Vijay"/>
-
+        <Parent/>
 
 
     </div>
