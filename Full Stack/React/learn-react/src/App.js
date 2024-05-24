@@ -15,8 +15,12 @@ import './App.css';
 // import PureCompForIncrement from './Components/PureCompForIncrement';
 // import Parent from './Parent';
 // import RefPractice from './Components/RefPractice';
-import ClickCounter from './Components/ClickCounter';
-import HoverCounter from './Components/HoverCounter';
+// import ClickCounter from './Components/ClickCounter';
+// import HoverCounter from './Components/HoverCounter';
+// import RefTask from './Components/RefTask';
+import ClickDecrementCounter from './Components/ClickDecrementCounter';
+import HoverDecrementCounter from './Components/HoverDecrementCounter';
+
 
 function App() {
   return (
@@ -67,8 +71,15 @@ function App() {
         <PureCompForIncrement/> */}
         {/* <Parent/> */}
         {/* <RefPractice/> */}
-        <ClickCounter/>
-        <HoverCounter/>
+        {/* <ClickCounter/>
+        <HoverCounter/> */}
+        {/* <RefTask/> */}
+        <ClickDecrementCounter/>
+        <HoverDecrementCounter/>
+
+
+
+
 
     </div>
 
