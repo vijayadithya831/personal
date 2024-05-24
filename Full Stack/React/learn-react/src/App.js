@@ -13,7 +13,8 @@ import './App.css';
 // import ParentComponent from './Components/ParentComponent';
 // import NormalCompForIncrement from './Components/NormalCompForIncrement';
 // import PureCompForIncrement from './Components/PureCompForIncrement';
-import Parent from './Parent';
+// import Parent from './Parent';
+import RefPractice from './Components/RefPractice';
 
 function App() {
   return (
@@ -62,7 +63,8 @@ function App() {
         {/* <ParentComponent/> */}
         {/* <NormalCompForIncrement/>
         <PureCompForIncrement/> */}
-        <Parent/>
+        {/* <Parent/> */}
+        <RefPractice/>
 
 
     </div>

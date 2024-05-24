@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {MemoizedChild} from './Child';
+// import {Child} from './Child';
 
 const Parent = () => {
     const [count,setCount] = useState(0)
@@ -12,6 +13,7 @@ const Parent = () => {
             <button onClick={() => setName('Vijay')}>Change Name</button>
             <h2>{count}</h2>
             <MemoizedChild name={name}/>
+            {/* <Child name={name}/> */}
         </div>
     );
 }

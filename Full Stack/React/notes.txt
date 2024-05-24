@@ -217,3 +217,33 @@ export default Counter;
 ==================================================================================================================================
 
 Memos in React => Memo is a function based component
+Syntax:
+export const MemoizedChild = React.memo(Child);
+
+Props are the only way that parent somponent can inte4act with child component, To modify the child we need to re-render it with new props.
+
+But in some cases, we need to modify the child outside of the typical date flow. Reference a DOM element without re-rendering the whole component, without using props or state. Here, refs provide a way to access DOM nodes or React elements, which is created in the render method. Ref is created inside the constructor of a class component.
+
+Syntax:
+create a reference using React.createRef():
+
+constructor(props) {
+    super(props)
+    this.myRef = React.createRef()
+}
+
+Accesing a reference
+
+render() {
+    return(
+        <div ref = {this.myRef}></div>
+    );
+}
+
+When to use ref:
+1. Managing focus
+2. intergrating with third party DOM libraries
+ (we will not use ref in functional component)
+
+==================================================================================================================================
+
