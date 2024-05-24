@@ -260,6 +260,9 @@ after clicking submit, we have to display all the details in console using refs.
 
 ==================================================================================================================================
 
-Higher order component (HOC)
-
+Higher order component (HOC): It is a function which accepts original component and returns the new component
 To share common functionality between components
+
+task
+
+create higher order component for decreasing button click count and hover count
