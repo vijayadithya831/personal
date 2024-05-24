@@ -247,3 +247,19 @@ When to use ref:
 
 ==================================================================================================================================
 
+ref task
+
+input => firstname
+input => lastname
+input => email
+input => password
+input => re-enter password
+submit button
+
+after clicking submit, we have to display all the details in console using refs.
+
+==================================================================================================================================
+
+Higher order component (HOC)
+
+To share common functionality between components

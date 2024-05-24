@@ -14,7 +14,9 @@ import './App.css';
 // import NormalCompForIncrement from './Components/NormalCompForIncrement';
 // import PureCompForIncrement from './Components/PureCompForIncrement';
 // import Parent from './Parent';
-import RefPractice from './Components/RefPractice';
+// import RefPractice from './Components/RefPractice';
+import ClickCounter from './Components/ClickCounter';
+import HoverCounter from './Components/HoverCounter';
 
 function App() {
   return (
@@ -64,8 +66,9 @@ function App() {
         {/* <NormalCompForIncrement/>
         <PureCompForIncrement/> */}
         {/* <Parent/> */}
-        <RefPractice/>
-
+        {/* <RefPractice/> */}
+        <ClickCounter/>
+        <HoverCounter/>
 
     </div>
 
