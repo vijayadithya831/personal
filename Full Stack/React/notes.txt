@@ -198,6 +198,7 @@ Pure Components in React JS: The parent component and normal component will re-r
 
 ==================================================================================================================================
 ComponentDidMount() => it is a method used to achieve asynchronous code.
+                       This methods will get executed when the component mount or render for the first time and it ony get executed only once during components' lifetime.
 
 React component render method will re-render component event if we pass same props and state which results in decrease in app performance.
 
@@ -264,7 +265,6 @@ Higher order component (HOC): It is a function which accepts original component 
 To share common functionality between components
 
 task
-
 create higher order component for decreasing button click count and hover count
 
 ==================================================================================================================================
@@ -278,4 +278,11 @@ HTTP => Hypertext Transfer Protocol
 HTTP GET => used to get data from the server. 
 HTTP POST => used to send data to the server. (while creating forms in html, we specify action as "POST")
 
-Axios Library => used to perform get and post in react.
+Axios Library => used to perform get and post in react. It is a promise based library.
+
+steps to post data from api
+1. import axios library
+2. create a state property which will store the list of data
+
+
+display title, body, userid from API
