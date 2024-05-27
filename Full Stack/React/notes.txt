@@ -266,3 +266,16 @@ To share common functionality between components
 task
 
 create higher order component for decreasing button click count and hover count
+
+==================================================================================================================================
+
+HTTP GET and POST:
+
+Every web based application is constructed between client and server.
+
+HTTP => Hypertext Transfer Protocol
+
+HTTP GET => used to get data from the server. 
+HTTP POST => used to send data to the server. (while creating forms in html, we specify action as "POST")
+
+Axios Library => used to perform get and post in react.

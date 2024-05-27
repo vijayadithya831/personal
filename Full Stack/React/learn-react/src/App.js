@@ -18,8 +18,8 @@ import './App.css';
 // import ClickCounter from './Components/ClickCounter';
 // import HoverCounter from './Components/HoverCounter';
 // import RefTask from './Components/RefTask';
-import ClickDecrementCounter from './Components/ClickDecrementCounter';
-import HoverDecrementCounter from './Components/HoverDecrementCounter';
+// import ClickDecrementCounter from './Components/ClickDecrementCounter';
+// import HoverDecrementCounter from './Components/HoverDecrementCounter';
 
 
 function App() {
@@ -74,8 +74,8 @@ function App() {
         {/* <ClickCounter/>
         <HoverCounter/> */}
         {/* <RefTask/> */}
-        <ClickDecrementCounter/>
-        <HoverDecrementCounter/>
+        {/* <ClickDecrementCounter/>
+        <HoverDecrementCounter/> */}
 
 
 
