@@ -26,24 +26,24 @@ export class PostDataFromForm extends Component {
     }
 
     render() {
-    const {userId, title, body} = this.state;
-    return (
-      <div>
-        <form action='' onSubmit={this.submitHandler}>
-            <div>
-                <input type='text' className='userId' value={userId} onChange={this.changeHandler}/>
-            </div>
-            <div>
-                <input type='text' className='title' value={title} onChange={this.changeHandler}/>
-            </div>
-            <div>
-                <input type='text' className='body' value={body} onChange={this.changeHandler}/>
-            </div>
-            <button type='submit'>Submit</button>
-        </form>
-      </div>
-    )
-  }
+        const {userId, title, body} = this.state;
+        return (
+        <div>
+            <form action='' onSubmit={this.submitHandler}>
+                <div>
+                    <input type='text' className='userId' value={userId} onChange={this.changeHandler}/>
+                </div>
+                <div>
+                    <input type='text' className='title' value={title} onChange={this.changeHandler}/>
+                </div>
+                <div>
+                    <input type='text' className='body' value={body} onChange={this.changeHandler}/>
+                </div>
+                <button type='submit'>Submit</button>
+            </form>
+        </div>
+        )
+    }
 }
 
 export default PostDataFromForm
