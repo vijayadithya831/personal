@@ -280,9 +280,26 @@ HTTP POST => used to send data to the server. (while creating forms in html, we 
 
 Axios Library => used to perform get and post in react. It is a promise based library.
 
-steps to post data from api
+steps to get data from api
 1. import axios library
 2. create a state property which will store the list of data
 
+==================================================================================================================================
+http get task
 
 display title, body, userid from API
+==================================================================================================================================
+
+How to POST the data to an API from React Application
+
+1. create input fields (user id, title, body of the content)
+2. create state properties for the input fields, and then link them
+3. add the onChange event handler to track the changes in the input values and keep them synced with the state object.
+4. inside the changeHandler method, we are gonna use setState method where the key is going to be a target
+5. besides action, we have to set onSubmit event handler
+6. inside the submit handler, we have preventDefault() method which is used to avoid page refresh.
+7. once the request is completed, wither we get a response or we get an error. so we have to use then and catch.
+==================================================================================================================================
+
+get and post task
+

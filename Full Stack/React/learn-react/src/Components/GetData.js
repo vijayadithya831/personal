@@ -27,7 +27,11 @@ export class GetPostData extends Component {
       <div>
         <h1>List of User Data</h1>
           {posts.map(post => 
-            <div key={post.id}>{post.title}</div>
+            <div key={post.id}>
+              <h1>User ID: {post.userId}</h1>
+              <h3>Title: {post.title}</h3>
+              <p>Body: {post.body}</p>
+            </div>
           )}
         </div>
     )
