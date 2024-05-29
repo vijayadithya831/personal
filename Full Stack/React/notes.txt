@@ -17,7 +17,7 @@ Maps => it is an inbuilt object that hold key-value pairs of any datatype.
         keys should be unique, but values can have duplicates
 
         syntax : const store = new Map();
-===========================================================================================================================================
+==================================================================================================================================
 REACT 🔥
 
 A Facebook and Instagram Collaboration 
@@ -57,7 +57,7 @@ Components => components is completely reusable code => which means for example,
 
 React is completely declarative (imperative => antonym) => Tell react what we want and reacg will build the actual UI => This is implicit way
 
-===========================================================================================================================================
+==================================================================================================================================
 
 to download react (prerequsites) => 1. node js
                                     2. browser
@@ -71,7 +71,7 @@ change directory => cd (my-app)
 
 run react app => npm start
 
-===========================================================================================================================================
+==================================================================================================================================
 
 Components => In React, component represents a part of user interfaces. They are reusable
               Components can be nested inside other components.
@@ -97,13 +97,13 @@ components are categorised into two types =>1. Stateless Functional Components
 Function component:
     Properties is otherwise known as parameters/arguements, which we pass into function component
     
-===========================================================================================================================================
+==================================================================================================================================
 
 To install npm create-react-app globally (Run in cmd) => npm install create-react-app -g
 
 to install npm globally => npm install -g npm@latest
 
-===========================================================================================================================================
+==================================================================================================================================
 
 Class Component:
     It is a normal js class
@@ -142,7 +142,7 @@ component 2
 component 3
     1 form => username, password, submit button
 
-======================================================================================================================================
+==================================================================================================================================
 
 Task => create 4 buttons, each button should change the state given
 2 headings, 2 paragraphs should be given
@@ -151,7 +151,7 @@ button 2 => change 1 paragraphs
 button 3 => change 2 headings
 button 4 => change 2 paragraphs
 
-======================================================================================================================================
+==================================================================================================================================
 
 State in ReactJS => States are managed inside or within the component.
                     Variables are declared inside the function body.
@@ -303,4 +303,7 @@ How to POST the data to an API from React Application
 
 get and post task
 
-comments
+post data to comments in the free API link
+
+==================================================================================================================================
+

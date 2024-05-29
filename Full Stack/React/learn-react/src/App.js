@@ -22,7 +22,7 @@ import './App.css';
 // import HoverDecrementCounter from './Components/HoverDecrementCounter';
 // import GetPostData from './Components/GetData';
 // import PostDataFromForm from './Components/PostDataFromForm';
-import PostDataTask from './Components/PostDataTask';
+// import PostDataTask from './Components/PostDataTask';
 
 
 
@@ -83,7 +83,8 @@ function App() {
         <HoverDecrementCounter/> */}
         {/* <GetPostData/> */}
         {/* <PostDataFromForm/> */}
-        <PostDataTask/>
+        {/* <PostDataTask/> */}
+        
 
 
 
