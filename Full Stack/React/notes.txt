@@ -307,3 +307,32 @@ post data to comments in the free API link
 
 ==================================================================================================================================
 
+React Hooks: (very important topic in react framework)
+
+    The concept of Hooks is a brand new feature in react, which is release after version 16.8.
+    Hooks allows us to use react features without having to use a class component.
+    eg: we can use states in function component using hooks.
+
+Why hooks?
+while using class component:
+    1. we need to understand who `this` keyword works in javascript
+    2. makes the code harder to follow
+
+    react hooks is a special function that allows function components to use react features without writing class components
+
+types of react hooks
+    1. useState
+    2. useEffect
+    3. useContext
+    4. useReducer
+    5. useCallback
+
+
+Steps to use state in functional component
+1. create a functional component
+2. use the useState hook => which accepts an arguement which is the initial value of the state property and it will return the current value of the state property, this method is also capable of updating the state property
+
+==================================================================================================================================
+
+create increment and decrement buttons using hooks
+

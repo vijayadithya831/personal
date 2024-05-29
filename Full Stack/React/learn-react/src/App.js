@@ -23,7 +23,8 @@ import './App.css';
 // import GetPostData from './Components/GetData';
 // import PostDataFromForm from './Components/PostDataFromForm';
 // import PostDataTask from './Components/PostDataTask';
-
+// import CounterClassComponent from './Components/CounterClassComponent';
+import CounterWithHooks from './Components/CounterWithHooks';
 
 
 
@@ -84,7 +85,8 @@ function App() {
         {/* <GetPostData/> */}
         {/* <PostDataFromForm/> */}
         {/* <PostDataTask/> */}
-        
+        {/* <CounterClassComponent/> */}
+        <CounterWithHooks/>
 
 
 
