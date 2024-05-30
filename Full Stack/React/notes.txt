@@ -347,5 +347,8 @@ create increment and decrement buttons using hooks
 
 3. context provides a way to pass a dada through the components without having to pass props down mannually at every level
 
-steps:
-    1. 
+==================================================================================================================================
+useContext task
+
+first create 3 components, without using hooks, use the data from component A in component C
+next do the same with hooks.
