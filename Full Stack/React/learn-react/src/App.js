@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-// import React from 'react';
+import React from 'react';
 // import {Welcome1, Welcome2, Buttons, Forms} from './Components/WelcomeFuncCompPractice'
 // import WelcomeStudents from './Components/WelcomeClassCompPractice';
 // import Information from './Components/information';
@@ -29,9 +29,12 @@ import './App.css';
 // import CounterWithHooksTask from './Components/CounterWithHooksTask';
 // import UseEffectPractice from './Components/useEffectPractice';
 // import ComponentA from './Components/ComponentA';
+import ComponentWithPropsA from './Components/ComponentWithPropsA';
+import ComponentWithoutPropsA from './Components/ComponentWithoutPropsA';
 
 
 // export const UserContext = React.createContext()
+export const TaskContext = React.createContext()
 function App() {
   return (
     <div className='App'>
@@ -96,6 +99,10 @@ function App() {
         {/* <UserContext.Provider value={'Rohit'}>
           <ComponentA/>
         </UserContext.Provider> */}
+        {/* <ComponentWithPropsA name="Vijay"/>
+        <TaskContext.Provider value='Venkat'>
+          <ComponentWithoutPropsA/>
+        </TaskContext.Provider> */}
 
 
     </div>
