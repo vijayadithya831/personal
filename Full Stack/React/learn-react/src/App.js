@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
+import React from 'react';
 // import {Welcome1, Welcome2, Buttons, Forms} from './Components/WelcomeFuncCompPractice'
 // import WelcomeStudents from './Components/WelcomeClassCompPractice';
 // import Information from './Components/information';
@@ -25,10 +26,12 @@ import './App.css';
 // import PostDataTask from './Components/PostDataTask';
 // import CounterClassComponent from './Components/CounterClassComponent';
 // import CounterWithHooks from './Components/CounterWithHooks';
-import CounterWithHooksTask from './Components/CounterWithHooksTask';
+// import CounterWithHooksTask from './Components/CounterWithHooksTask';
+// import UseEffectPractice from './Components/useEffectPractice';
+import ComponentA from './Components/ComponentA';
 
 
-
+export const UserContext = React.createContext()
 function App() {
   return (
     <div className='App'>
@@ -88,9 +91,11 @@ function App() {
         {/* <PostDataTask/> */}
         {/* <CounterClassComponent/> */}
         {/* <CounterWithHooks/> */}
-        <CounterWithHooksTask/>
-
-
+        {/* <CounterWithHooksTask/> */}
+        {/* <UseEffectPractice/> */}
+        <UserContext.Provider value={'Rohit'}>
+          <ComponentA/>
+        </UserContext.Provider>
 
 
     </div>
