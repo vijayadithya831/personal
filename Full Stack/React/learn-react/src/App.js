@@ -31,6 +31,9 @@ import React from 'react';
 // import ComponentA from './Components/ComponentA';
 // import ComponentWithPropsA from './Components/ComponentWithPropsA';
 // import ComponentWithoutPropsA from './Components/ComponentWithoutPropsA';
+import CustomerAdd from './Components/CustomerAdd';
+
+
 
 
 // export const UserContext = React.createContext()
@@ -103,6 +106,8 @@ function App() {
         <TaskContext.Provider value='Venkat'>
           <ComponentWithoutPropsA/>
         </TaskContext.Provider> */}
+        <h1>Heading from app.js</h1>
+        <CustomerAdd/>
 
 
 

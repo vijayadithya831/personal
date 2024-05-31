@@ -283,6 +283,7 @@ Axios Library => used to perform get and post in react. It is a promise based li
 steps to get data from api
 1. import axios library
 2. create a state property which will store the list of data
+(if axios not found, pip install axios in terminal)
 
 ==================================================================================================================================
 http get task
@@ -356,4 +357,37 @@ next do the same with hooks.
 
 ==================================================================================================================================
 
-4. 
+4. it is used for state management 
+
+
+==================================================================================================================================
+
+task => Add student list:
+            3 input fields, with name, age and department (cse, ese, mech, civil)
+        output should be in the format: 
+            student list
+
+            vijay
+            venkat
+            sundar
+            udei
+
+            student info
+
+            vijay is in cse dept. etc
+
+==================================================================================================================================
+
+
+
+
+
+
+
+
+
+Redux in react
+
+    * transferring the data from a component to a store(where data is stored) is called 'action'
+    * from the store, we can access the data from anywhere.
+    definition: It serves as a centralized store that is used for state management in an application, making it easier to manage state accross the entire application and it enables us to predict behaviour through a set of rules.
