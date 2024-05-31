@@ -9,7 +9,6 @@ export default function CustomerView(props) {
                     props.customers.map((customer,index)=><li key={index}>{customer}</li>)
                 }
             </ul>
-
         </>
     );
 }
