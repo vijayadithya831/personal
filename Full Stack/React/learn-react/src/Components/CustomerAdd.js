@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import CustomerView from './CustomerView';
 
-export default function CustomerAdd(props) {
+export default function CustomerAdd() {
     const [input, setInput] = useState("");
     const [customers, setCustomers] = useState([])
     function addCustomer() {
