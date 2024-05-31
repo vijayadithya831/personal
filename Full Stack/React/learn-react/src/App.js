@@ -27,7 +27,7 @@ import React from 'react';
 // import CounterClassComponent from './Components/CounterClassComponent';
 // import CounterWithHooks from './Components/CounterWithHooks';
 // import CounterWithHooksTask from './Components/CounterWithHooksTask';
-import UseEffectPractice from './Components/useEffectPractice';
+// import UseEffectPractice from './Components/useEffectPractice';
 // import ComponentA from './Components/ComponentA';
 // import ComponentWithPropsA from './Components/ComponentWithPropsA';
 // import ComponentWithoutPropsA from './Components/ComponentWithoutPropsA';
@@ -95,7 +95,7 @@ function App() {
         {/* <CounterClassComponent/> */}
         {/* <CounterWithHooks/> */}
         {/* <CounterWithHooksTask/> */}
-        <UseEffectPractice/>
+        {/* <UseEffectPractice/> */}
         {/* <UserContext.Provider value={'Rohit'}>
           <ComponentA/>
         </UserContext.Provider> */}
@@ -103,6 +103,8 @@ function App() {
         <TaskContext.Provider value='Venkat'>
           <ComponentWithoutPropsA/>
         </TaskContext.Provider> */}
+
+
 
 
     </div>
