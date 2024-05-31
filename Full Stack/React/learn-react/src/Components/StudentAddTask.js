@@ -8,12 +8,17 @@ function StudentAddTask() {
     const [studentNames, setStudentNames] = useState([]);
     const [studentAges, setStudentAges] = useState([]);
     const [studentDepts, setStudentDepts] = useState([]);
+    const [studentObject, setStudentObject] = useState([])
     const [showStudentInfo, setShowStudentInfo] = useState(false);
     function addStudent() {
         if(nameInput && ageInput && deptInput){
             setStudentNames((prevState)=>[...prevState, nameInput]);
             setStudentAges((prevState)=>[...prevState, ageInput]);
             setStudentDepts((prevState)=>[...prevState, deptInput]);
+            setStudentObject((prevState)=>{
+                const temp = {name:nameInput,age:ageInput,dept:deptInput}
+                return [...prevState, temp]
+            })
             console.log();
             setNameInput("");
             setAgeInput("");
@@ -29,7 +34,7 @@ function StudentAddTask() {
             <input type='text' value={ageInput} onChange={(e)=>{setAgeInput(e.target.value)}}/><br/>
             <input type='text' value={deptInput} onChange={(e)=>{setDeptInput(e.target.value)}}/><br/>
             <button onClick={addStudent}>Add Student</button><br/><br/>
-            {showStudentInfo && <StudentViewTask studentNames={studentNames} studentAges={studentAges} studentDepts={studentDepts}/>}
+            {showStudentInfo && <StudentViewTask studentNames={studentNames} studentAges={studentAges} studentDepts={studentDepts} studentObject={studentObject}/>}
         </>
     );
 }

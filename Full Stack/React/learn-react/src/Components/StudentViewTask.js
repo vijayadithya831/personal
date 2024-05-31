@@ -4,6 +4,7 @@ function StudentViewTask(props) {
     const studentNames = props.studentNames || [];
     const studentAges = props.studentAges || [];
     const studentDepts = props.studentDepts || [];
+    const studentObject = props.studentObject || [];
     return(
         <>
             <h2>This is the list of students</h2>
@@ -17,6 +18,10 @@ function StudentViewTask(props) {
                 </li>
                 )}
             </ul>
+            <h2>Object datas</h2>
+            {
+                studentObject.map((student,index)=><p key={index}>{student.name} and {student.age} and {student.dept}</p>)
+            }
         </>
     );
 }
