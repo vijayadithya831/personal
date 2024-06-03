@@ -379,6 +379,18 @@ task => Add student list:
 ==================================================================================================================================
 
 
+5. It is a built-in hook in react, this hooks let us to invoke or memoize a callback function by preventing it from being recreated on every render. In simple terms, the callback function does not redefined on evrery render.
+
+==================================================================================================================================
+
+task
+
+use useCallback hook to do the folloing
+
+display image, price and add to cart button and remove from cart button, (add upto 6 products)
+
+
+
 
 
 
