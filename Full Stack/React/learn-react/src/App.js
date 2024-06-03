@@ -46,7 +46,7 @@ function App() {
   const [cart, setCart] = useState(0);
   const addToCart = useCallback(() => {
     setCart(cart+1)
-  },[]);
+  },[cart]);
   return (
     <div className='App'>
       {/* <Welcome name = "Vijay" sportsName = "Cricket" age = "21" gender = "Male"/>
